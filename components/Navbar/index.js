@@ -9,9 +9,9 @@ function Navbar() {
   const [selectedItem, setSelectedItem] = useState(0);
   return (
     <div className="flex justify-center ">
-      <div className=" flex justify-between w-[90%] items-center my-3  p-3">
+      <div className=" flex justify-between w-[90%] items-center ">
       <div>
-      <img src="./assets/images/logo.png" alt="Logo" className="w-18 h-14" />
+      <img src="./assets/images/logo.png" alt="Logo" className="w-20 h-20" />
       </div>
       <div className="flex space-x-5">
         {menuItems.map((item, index) => (

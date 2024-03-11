@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
+import Section1 from "@/components/Section1";
+
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
      
     <Header/>
     <Navbar/>
+    <Section1/>
 
     </main>
   );

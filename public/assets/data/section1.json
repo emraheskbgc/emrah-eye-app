@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "imagePath":"/assets/images/daire1img.png",
+        "text":"Comprehensive Eye Exams",
+        "bgClass":"daire1-bg"
+    },
+    {
+        "id" : 2,
+        "imagePath":"/assets/images/daire2img.png",
+        "text":"Contact Lens",
+        "bgClass":"daire2-bg"
+    },
+    {
+        "id" : 3,
+        "imagePath":"/assets/images/daire3img.png",
+        "text":"IPL Treatments",
+        "bgClass":"daire3-bg"
+    }
+]

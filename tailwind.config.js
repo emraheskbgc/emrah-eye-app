@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'daire1-bg': "url('/assets/images/daire1.png')",
+        'daire2-bg': "url('/assets/images/daire2.png')",
+        'daire3-bg': "url('/assets/images/daire3.jpeg')",
       },
       
     },
