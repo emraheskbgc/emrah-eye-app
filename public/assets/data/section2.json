@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "imgPath":"/assets/images/card1.png",
+        "text":"Lorem ipsum dolor sit amet consectetur."
+    },
+    {
+        "id":2,
+        "imgPath":"/assets/images/card2.png",
+        "text":"Lorem ipsum dolor sit amet consectetur."
+    },
+    {
+        "id":3,
+        "imgPath":"/assets/images/card3.png",
+        "text":"Lorem ipsum dolor sit amet consectetur."
+    }
+
+]
