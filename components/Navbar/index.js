@@ -28,7 +28,7 @@ function Navbar() {
     <div className="flex justify-center ">
       <div className=" flex justify-between w-[90%] items-center ">
       <div>
-      <img src="./assets/images/logo.png" alt="Logo" className="w-20 h-20" />
+      <img src="./assets/images/logo1.png" alt="Logo" className="w-14 h-16" />
       </div>
       <div className="flex space-x-5">
         {menuItems.map((item, index) => (
