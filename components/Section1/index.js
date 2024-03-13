@@ -5,7 +5,7 @@ import data from "@/public/assets/data/section1.json";
 function Section1() {
  
   return (
-    <div className="border">
+    <div >
       <div className="relative">
       <img src="/assets/images/head.png" alt="" className="w-full h-[754px]" />
 
