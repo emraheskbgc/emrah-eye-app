@@ -24,7 +24,10 @@ module.exports = {
       grayIcon:"#ffffff",
       bodybg:"#f5f5f5",
       redTitle:"#9b0002",
-      blackBg:"#030712"
+      blackBg:"#030712",
+      darkRed:"#7f2929",
+      starYellow:"#ebb84e",
+      commentTimeText:"#c3cfd9"
     }
   },
   plugins: [],
