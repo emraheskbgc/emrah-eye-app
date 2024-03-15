@@ -12,7 +12,7 @@ function Section4() {
       {datas.map((data) => (
         <div key={data.id}  >
           <div
-            className={` bg-${data.bgClass} bg-cover bg-center md:w-56 md:h-56 w-24 h-24 rounded-full flex justify-center items-center `}
+            className={` bg-${data.bgClass} bg-cover bg-center md:w-56 md:h-56 w-16 h-16 rounded-full flex justify-center items-center `}
           >
             <img src={data.imagePath} alt="" className="w-10 h-10" />
           </div>
