@@ -12,3 +12,7 @@
     background-color: #bbbbbb; /* Scrollbar rengi */
     border-radius: 20px; /* Oval yapmak için */
   }
+
+  .scrollYOff{
+    scrollbar-width: none;
+  }
