@@ -18,7 +18,7 @@ function Section1() {
             <>
               <div key={index}>
                 <div
-                  className={` bg-${item.bgClass} bg-cover bg-center  w-28 h-28  md:w-56 md:h-56 rounded-full flex justify-center items-center `}
+                  className={` bg-${item.id === 1 ? "daire1-bg" : item.id === 2 ? "daire2-bg" : item.id === 3 ? "daire3-bg" :""} bg-cover bg-center  w-28 h-28  md:w-56 md:h-56 rounded-full flex justify-center items-center `}
                 >
                   <img src={item.imagePath} alt="" />
                 </div>
