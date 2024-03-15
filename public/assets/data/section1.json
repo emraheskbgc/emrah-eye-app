@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "imagePath":"/assets/images/daire1img.png",
-        "text":"Comprehensive Eye Exams",
+        "text":"Comprehensive ",
         "bgClass":"daire1-bg"
     },
     {
@@ -14,7 +14,7 @@
     {
         "id" : 3,
         "imagePath":"/assets/images/daire3img.png",
-        "text":"IPL Treatments",
+        "text":" Treatments",
         "bgClass":"daire3-bg"
     }
 ]

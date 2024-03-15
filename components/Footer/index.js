@@ -4,10 +4,10 @@ import { FaFacebook,FaLinkedin,FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <div className="relative bg-footer-bg  bg-cover bg-center h-[613px]  mt-32">
-      <div className="absolute right-14 top-0 mt-[-100px]">
-        <img src="/assets/images/logo.png" alt="" />
+      <div className="absolute md:right-14 top-0 right-0 mt-[-40px] md:mt-[-100px]">
+        <img src="/assets/images/logo.png" className=" md:w-52 md:h-52  w-28   h-28" alt="" />
       </div>
-      <div className="absolute left-32 top-32 text-grayIcon">
+      <div className="absolute md:left-32 md:top-32 top-20 left-10 text-sm md:text-base text-grayIcon">
         <div className="flex space-x-8">
           <div>
             <h1>REACH OUT</h1>

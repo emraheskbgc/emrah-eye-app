@@ -3,13 +3,13 @@
         "id":1,
         "imagePath":"/assets/images/otherimg1.png",
         "bgClass":"otherFea1",
-        "title":"Diabetic Evaluationd"
+        "title":"Diabetic "
     },
     {
         "id":2,
         "imagePath":"/assets/images/otherimg2.png",
         "bgClass":"otherFea2",
-        "title":"Glaoucoma Treatment"
+        "title":"Glaoucoma "
     },
     {
         "id":3,

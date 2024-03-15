@@ -59,7 +59,7 @@ function Section7() {
           ))}
         </div>
       
-      <div className="flex justify-center mt-10">
+      <div className="md:flex justify-center mt-10 hidden ">
         <button
           onClick={handleScrollLeft}
           className="bg-grayIcon text-white w-10 h-10 flex justify-center items-center rounded-full opacity-75 hover:opacity-100"
