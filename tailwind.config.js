@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'daire1-bg': "url('/assets/images/daire1.png')",
+        'daire1-bg': "url(/assets/images/daire1.png)",
         'daire2-bg': "url('/assets/images/daire2.png')",
         'daire3-bg': "url('/assets/images/daire3.jpeg')",
         'otherFea1': "url('/assets/images/otherfeatured1.jpeg')",

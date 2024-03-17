@@ -33,7 +33,7 @@ function Navbar() {
       <div className="flex justify-between w-full max-w-screen-lg items-center px-4 sm:px-6 lg:px-8">
         <div>
           {/* Logo */}
-          <img src="./assets/images/logo1.png" alt="Logo" className="w-14 h-16" />
+          <img src="./assets/images/logo/logo-04.png" alt="Logo" className="w-14 h-16" />
         </div>
         <div className={` sm:flex space-x-5 `}>
         {menuItems.map((item, index) => (

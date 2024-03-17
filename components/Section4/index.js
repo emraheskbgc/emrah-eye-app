@@ -1,6 +1,5 @@
 import React from "react";
-import datas from "@/public/assets/data/section4.json";
-
+import {data} from "./data"
 function Section4() {
   return (
     <>
@@ -9,10 +8,10 @@ function Section4() {
     </div>
     <div className="flex justify-evenly space-x-3 ">
     
-      {datas.map((data) => (
+      {data.map((data) => (
         <div key={data.id}  >
           <div
-            className={` bg-${data.id === 1 ?"otherFea1" : data.id === 2 ? "otherFea2" : data.id === 3 ? "otherFea3" : data.id === 4 ?"otherFea4" :""} bg-cover bg-center md:w-56 md:h-56 w-16 h-16 rounded-full flex justify-center items-center `}
+            className={`${data.bgClass} bg-cover bg-center md:w-56 md:h-56 w-16 h-16 rounded-full flex justify-center items-center `}
           >
             <img src={data.imagePath} alt="" className="w-10 h-10" />
           </div>

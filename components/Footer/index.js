@@ -4,8 +4,8 @@ import { FaFacebook,FaLinkedin,FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <div className="relative bg-footer-bg  bg-cover bg-center h-[613px]  mt-32">
-      <div className="absolute md:right-14 top-0 right-0 mt-[-40px] md:mt-[-100px]">
-        <img src="/assets/images/logo.png" className=" md:w-52 md:h-52  w-28   h-28" alt="" />
+      <div className="absolute md:right-14 top-0 right-0 mt-[-40px] md:mt-[-80px]">
+        <img src="/assets/images/logo/logo-05.png" className=" md:w-52 md:h-52  w-28   h-28" alt="" />
       </div>
       <div className="absolute md:left-32 md:top-32 top-20 left-10 text-sm md:text-base text-grayIcon">
         <div className="flex space-x-8">
