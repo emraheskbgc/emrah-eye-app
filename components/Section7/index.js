@@ -32,7 +32,7 @@ function Section7() {
         </h1>
       </div>
      
-      <div ref={scrollRef} className={`flex space-x-10 mt-10 ml-20 overflow-x-auto ${styles.scrollYOff}`}>
+      <div ref={scrollRef} className={`flex space-x-10 mt-10 md:ml-20 overflow-x-auto ${styles.scrollYOff}`}>
         {datas.map((data, index) => (
           <div key={data.id} className="bg-grayIcon p-5 rounded-2xl ml-4">
             <div className="flex w-80 items-center">
@@ -62,7 +62,7 @@ function Section7() {
         ))}
       </div>
 
-      <div className="flex justify-start space-x-1 mt-6 ml-24">
+      <div className="flex justify-start space-x-1 mt-6 md:ml-24 ml-5">
         {datas.map((_, index) => (
           <button
             key={index}
