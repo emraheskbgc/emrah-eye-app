@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import React from "react";
 import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
@@ -8,19 +8,19 @@ function Navbar() {
   const menuItems = [
     {
       id: 1,
-      name: "Home"
+      name: "Home",
     },
     {
       id: 2,
-      name: "About"
+      name: "About",
     },
     {
       id: 3,
-      name: "Team"
+      name: "Team",
     },
     {
       id: 4,
-      name: "Review"
+      name: "Review",
     },
   ];
 
@@ -29,33 +29,37 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="flex justify-center">
-      <div className="flex justify-between w-full max-w-screen-lg items-center px-4 sm:px-6 lg:px-8">
-        <div>
-          {/* Logo */}
-          <img src="./assets/images/logo/logo-04.png" alt="Logo" className="w-14 h-16" />
+    <div className="flex justify-center ">
+      <div className="flex justify-between px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
+        <div className="bg-grayHead bg-opacity-5 p-2 rounded-full">
+          <div className="bg-grayHead bg-opacity-10 p-2 rounded-full">
+            <div className="bg-grayIcon py-1 px-2 rounded-full">
+              {/* Logo */}
+              <img src="./assets/images/logo/logo-02.png" alt="Logo" />
+            </div>
+          </div>
         </div>
-        <div className={` sm:flex space-x-5 `}>
-        {menuItems.map((item, index) => (
-          <span
-            key={item.id}
-            className={`text-grayHead cursor-pointer ${
-              selectedItem === item.id ? "border-b-2 pb-2" : ""
-            }`}
-            onClick={() => {
-              setSelectedItem(item.id);
-              setIsMenuOpen(false);
-            }}
-          >
-            {item.name}
-          </span>
-        ))}
-      </div>
-        <div className="flex sm:hidden">
+        <div className= " sm:flex space-x-5 ">
+          {menuItems.map((item) => (
+            <span
+              key={item.id}
+              className={`text-grayHead cursor-pointer md:block hidden ${
+                selectedItem === item.id ? "border-b-2 pb-2" : ""
+              }`}
+              onClick={() => {
+                setSelectedItem(item.id);
+                setIsMenuOpen(false);
+              }}
+            >
+              {item.name}
+            </span>
+          ))}
+        </div>
+        <div className="flex sm:hidden border p-2 rounded-lg bg-grayHead text-grayIcon ">
           {/* Mobil cihazlarda menüyü açma/kapama butonu */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-grayHead cursor-pointer focus:outline-none"
+            className=" cursor-pointer focus:outline-none"
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -91,21 +95,14 @@ function Navbar() {
           </div>
         )}
         {/* Diğer cihazlarda görünen yardım butonu */}
-        <div className="flex space-x-2">
-        <div className="hidden sm:flex justify-center items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
-          <div className="text-xs">Call Center</div>
-          <div className="text-2xl">
-            <FaCaretDown />
+        <div className="md:flex hidden space-x-2 ">
+          <div className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
+            <div className="text-xs">Call Center</div>
+          </div>
+          <div className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
+            <div className="text-xs">Chat with us</div>
           </div>
         </div>
-        <div className="hidden sm:flex justify-center items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
-          <div className="text-xs">Chat with us</div>
-          <div className="text-2xl">
-            <FaCaretDown />
-          </div>
-        </div>
-        </div>
-        
       </div>
     </div>
   );
