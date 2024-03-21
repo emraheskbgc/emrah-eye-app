@@ -24,7 +24,7 @@ function Section7() {
   };
 
   return (
-    <div>
+    <div >
       <div className="flex justify-center text-[60px] font-[500]">
         <h1 className="flex flex-col">
           <span>customer</span>{" "}
@@ -32,10 +32,11 @@ function Section7() {
         </h1>
       </div>
      
-      <div ref={scrollRef} className={`flex space-x-10 mt-10 md:ml-20 overflow-x-auto ${styles.scrollYOff}`}>
-        {datas.map((data, index) => (
-          <div key={data.id} className="bg-grayIcon p-5 rounded-2xl ml-4">
-            <div className="flex w-80 items-center">
+      <div ref={scrollRef} className={`flex space-x-1 mt-10   md:ml-20 overflow-x-auto ${styles.scrollYOff}`}>
+        {datas.map((data) => (
+          <div key={data.id} >
+          <div  className="bg-grayIcon p-5  w-[400px]  items-center  rounded-2xl ml-4">
+            <div className="flex w-full  items-center">
               <div className="mr-5">
                 <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
               </div>
@@ -59,6 +60,8 @@ function Section7() {
               </p>
             </div>
           </div>
+          </div>
+          
         ))}
       </div>
 

@@ -6,7 +6,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 
 function Section3() {
   return (
-    <div className=' flex flex-col justify-center p-5 mt-16'>
+    <div className=' flex flex-col justify-center p-5 mt-40 mb-40'>
       <span className='text-[60px] font-[500] flex-col flex justify-center items-center'>
         Welcome <br/> <span className='text-redTitle text-3xl'>To Zmyslinski Eye</span>
       </span>

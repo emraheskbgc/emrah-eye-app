@@ -91,12 +91,21 @@ function Navbar() {
           </div>
         )}
         {/* Diğer cihazlarda görünen yardım butonu */}
+        <div className="flex space-x-2">
         <div className="hidden sm:flex justify-center items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
-          <div className="text-xs">Live Help</div>
+          <div className="text-xs">Call Center</div>
           <div className="text-2xl">
             <FaCaretDown />
           </div>
         </div>
+        <div className="hidden sm:flex justify-center items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
+          <div className="text-xs">Chat with us</div>
+          <div className="text-2xl">
+            <FaCaretDown />
+          </div>
+        </div>
+        </div>
+        
       </div>
     </div>
   );
