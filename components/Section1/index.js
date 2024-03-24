@@ -9,11 +9,11 @@ function Section1() {
        <img
           src="/assets/images/head.png"
           alt=""
-          className="w-full h-[300px] md:h-full md:rounded-none rounded-2xl"
+          className="w-full   md:rounded-none rounded-2xl"
         />
 
         <div className="absolute  right-0 top-0 md:mr-11 md:mt-6 mr-8 mt-5 ">
-          <img src="/assets/images/head2.png" alt="" className="w-20 md:w-56" />
+          <img src="/assets/images/head2.png" alt="" className="w-16 md:w-56" />
         </div>
       </div>
        

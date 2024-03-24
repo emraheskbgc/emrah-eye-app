@@ -35,7 +35,7 @@ function Navbar() {
           <div className="bg-grayHead bg-opacity-10 p-2 rounded-full">
             <div className="bg-grayIcon py-1 px-2 rounded-full">
               {/* Logo */}
-              <img src="./assets/images/logo/logo-02.png" alt="Logo" />
+              <img src="./assets/images/logo/logo-04.png " className="w-5 md:w-10" alt="Logo" />
             </div>
           </div>
         </div>
