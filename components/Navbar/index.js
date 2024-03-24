@@ -3,7 +3,7 @@ import { useState } from "react";
 import React from "react";
 import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
 
-function Navbar() {
+function Navbar({call, message}) {
   // Menü öğeleri listesi
   const menuItems = [
     {
@@ -28,13 +28,7 @@ function Navbar() {
   const [selectedItem, setSelectedItem] = useState(menuItems[0].id);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const phoneNumber = "+14807267009"
-  const call = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  }
-  const message  =() => {
-    window.location.href =`https://wa.me/${phoneNumber}`;
-  }
+
   return (
     <div className="flex justify-center ">
       <div className="flex justify-between px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">

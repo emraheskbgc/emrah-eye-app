@@ -3,15 +3,9 @@ import React, { useState } from 'react'
 import { FaFacebook,FaLinkedin,FaInstagram } from "react-icons/fa";
 
 
-function Header() {
+function Header({call, message}) {
 
-  const phoneNumber = "+14807267009"
-  const call = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  }   
-  const message  =() => {
-    window.location.href =`https://wa.me/${phoneNumber}`;
-  }
+ 
   return (
     <div className='bg-grayHead text-grayIcon flex  justify-center md:justify-end items-center  space-x-3 text-xl md:pr-7 h-[48px]'>
 

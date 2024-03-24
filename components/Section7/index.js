@@ -44,11 +44,9 @@ function Section7() {
                 <div className="text-darkRed font-[500] uppercase text-md">{data.name} </div>
                 <div className="flex justify-between space-x-4 ">
                   <div className="flex space-x-1 text-2xl text-starYellow">
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
+                  {[...Array(Number(data.numberOfStars))].map((_, i) => (
+                    <IoIosStar key={i} />
+                  ))}
                   </div>
                   <div className="text-commentTimeText">4 hour ago</div>
                 </div>
