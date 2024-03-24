@@ -32,7 +32,9 @@ function Navbar() {
   const call = () => {
     window.location.href = `tel:${phoneNumber}`;
   }
-
+  const message  =() => {
+    window.location.href =`https://wa.me/${phoneNumber}`;
+  }
   return (
     <div className="flex justify-center ">
       <div className="flex justify-between px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
@@ -104,7 +106,7 @@ function Navbar() {
           <div onClick={call} className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
             <div className="text-xs">Call Center</div>
           </div>
-          <div className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
+          <div onClick={message} className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
             <div className="text-xs">Chat with us</div>
           </div>
         </div>
