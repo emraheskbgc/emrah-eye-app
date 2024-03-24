@@ -25,7 +25,7 @@ function Section7() {
 
   return (
     <div >
-      <div className="flex justify-center text-[60px] font-[500]">
+      <div className="flex justify-center text-[30px] md:text-[60px] font-[500] mt-20">
         <h1 className="flex flex-col">
           <span>customer</span>{" "}
           <span className="text-redTitle ml-10 mt-[-20px]">reviews</span>
@@ -35,7 +35,7 @@ function Section7() {
       <div ref={scrollRef} className={`flex space-x-1 mt-10   md:ml-20 overflow-x-auto ${styles.scrollYOff}`}>
         {datas.map((data) => (
           <div key={data.id} >
-          <div  className="bg-grayIcon p-5  w-[400px]  items-center  rounded-2xl ml-4">
+          <div  className="bg-grayIcon p-5  md:w-[400px] w-[350px]  items-center  rounded-2xl ml-4">
             <div className="flex w-full  items-center">
               <div className="mr-5">
                 <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
@@ -65,7 +65,7 @@ function Section7() {
         ))}
       </div>
 
-      <div className="flex justify-start space-x-1 mt-6 md:ml-24 ml-5">
+      <div className=" hidden md:flex justify-start space-x-1 mt-6 md:ml-24 ml-5">
         {datas.map((_, index) => (
           <button
             key={index}

@@ -23,7 +23,7 @@ function Section1() {
            {data.map((item, index) => (
               <>
                 <div key={index} className="">
-                  <div className="space-x-5  flex flex-col justify-center items-center space-y-5  ">
+                  <div  className="md:space-x-5  flex flex-col justify-center items-center space-y-5  ">
                     <div
                       className={` ${item.bgClass} hidden  bg-cover bg-center shadow-lg opacity-90 shadow-grayHead w-28 h-28  md:w-56 md:h-56 rounded-full md:flex justify-center items-center `}
                     >

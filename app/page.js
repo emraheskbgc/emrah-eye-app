@@ -18,6 +18,10 @@ export default function Home() {
     <Section1/>
     <Section3/> 
     <Section4/>
+    <Section7/>
+    <Section6/>
+
+
     <Footer/>
 
   {/*
@@ -25,8 +29,6 @@ export default function Home() {
    
     
     <Section5/>
-    <Section7/>
-    <Section6/>
   
  
 */}
