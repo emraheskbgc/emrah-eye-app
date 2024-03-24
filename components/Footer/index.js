@@ -73,13 +73,13 @@ function Footer() {
             <div>Phone:(480) 726-7009</div>
           </div>  
           <div className="mt-6 space-y-4">
-          <div className="flex bg-linkedinLogo p-2 text-grayIcon  space-x-4 rounded ">
-             <div > <img src="/assets/images/footerLinkedin.png" alt="" /> </div>
-             <div className="text-sm font-[200] border-l pl-4 border-solid border-commentTimeText ">Linkedin</div>
+          <div className="flex bg-linkedinLogo p-2 text-grayIcon  space-x-1 rounded ">
+             <div className="mr-3" > <img src="/assets/images/footerLinkedin.png" alt="" /> </div>
+             <div className="text-sm font-[200] border-l pl-3  border-solid border-commentTimeText ">Linkedin</div>
           </div>
-          <div className="flex bg-facebookLogo p-2 text-grayIcon  space-x-4 rounded ">
-             <div > <img src="/assets/images/footerFacebook.png" alt="" /> </div>
-             <div className="text-sm font-[200] border-l pl-4 border-solid border-commentTimeText ">Facebook</div>
+          <div className="flex bg-facebookLogo p-2 text-grayIcon  space-x-1 rounded ">
+             <div className="mr-2" > <img src="/assets/images/footerFacebook.png" alt="" /> </div>
+             <div className="text-sm font-[200] border-l pl-3 border-solid border-commentTimeText ">Facebook</div>
           </div>
           </div> 
       </div>
