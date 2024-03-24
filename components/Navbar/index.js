@@ -28,6 +28,11 @@ function Navbar() {
   const [selectedItem, setSelectedItem] = useState(menuItems[0].id);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const phoneNumber = "+14807267009"
+  const call = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  }
+
   return (
     <div className="flex justify-center ">
       <div className="flex justify-between px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
@@ -96,7 +101,7 @@ function Navbar() {
         )}
         {/* Diğer cihazlarda görünen yardım butonu */}
         <div className="md:flex hidden space-x-2 ">
-          <div className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
+          <div onClick={call} className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
             <div className="text-xs">Call Center</div>
           </div>
           <div className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
