@@ -32,7 +32,8 @@ module.exports = {
       commentTimeText:"#c3cfd9",
       grayBg:"#eceef0",
       linkedinLogo:"#0E76A8",
-      facebookLogo:"#F1FAFF30"
+      facebookLogo:"#F1FAFF30",
+      cardBg:"#919EAB29"
     }
   },
   plugins: [],
