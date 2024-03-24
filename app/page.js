@@ -16,15 +16,18 @@ export default function Home() {
     <Header/> 
     <Navbar/>
     <Section1/>
+    <Section3/> 
+    <Section4/>
+    <Footer/>
+
   {/*
     
    
-    <Section3/> 
-    <Section4/>
+    
     <Section5/>
     <Section7/>
     <Section6/>
-    <Footer/>
+  
  
 */}
 

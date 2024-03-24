@@ -16,7 +16,8 @@ module.exports = {
         'otherFea3': "url('/assets/images/otherfeatured3.png')",
         'otherFea4': "url('/assets/images/otherfeatured4.png')",
         
-        'footer-bg': "url('/assets/images/footerImage.png')"
+        'footer-bg': "url('/assets/images/footerImage.png')",
+        'footer-bg-mobile':"url('/assets/images/footerImageMobile.png')"
       },
       
     },
@@ -28,7 +29,10 @@ module.exports = {
       blackBg:"#030712",
       darkRed:"#7f2929",
       starYellow:"#ebb84e",
-      commentTimeText:"#c3cfd9"
+      commentTimeText:"#c3cfd9",
+      grayBg:"#eceef0",
+      linkedinLogo:"#0E76A8",
+      facebookLogo:"#F1FAFF30"
     }
   },
   plugins: [],

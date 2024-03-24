@@ -6,22 +6,32 @@ function Section4() {
     <div className="flex justify-center text-[60px] font-[500]">
     <h1 className="flex flex-col"><span>Other</span> <span className="text-redTitle ml-10 mt-[-20px]">Featured</span></h1>
     </div>
-    <div className="flex justify-evenly space-x-3 ">
+    <div className="flex flex-col md:flex-row justify-evenly space-x-3 ">
     
       {data.map((data) => (
-        <div key={data.id}  >
+        <div key={data.id} className=" md:mt-20 mt-10  flex justify-center flex-col items-center" >
           <div
-            className={`${data.bgClass} bg-cover bg-center md:w-56 md:h-56 w-16 h-16 rounded-full flex justify-center items-center `}
+            className={`${data.bgClass}  bg-cover bg-center md:w-56 md:h-56 w-16 h-16 rounded-full md:flex hidden justify-center items-center `}
           >
             <img src={data.imagePath} alt="" className="w-10 h-10" />
           </div>
-          <div className=" flex mt-4 justify-center ">
+          <div className=" hidden md:flex mt-4 justify-center ">
             <p className="font-[500] text-xs md:text-xl">{data.title}</p>
           </div>
-          <div className="flex justify-center mt-6">
+          <div className=" hidden md:flex justify-center mt-6">
             <img src="/assets/images/vector.png" alt="" className="w-5 "/>
           </div>
-        </div>
+          
+          <div className="shadow-xl  flex flex-col justify-center p-3 rounded-2xl bg-grayIcon bg-opacity-90 w-[90%] h-72  md:w-80 md:h-80">
+          <div className=' flex justify-center md:max-h-60    items-center'>
+          <img className=" md:max-h-60 max-h-56 " src={data.cardImg} alt=""  />
+
+</div>
+         
+           <div className={`text-[8px] md:text-sm overflow-x-auto text-center max-h-10 `}>{data.cardText}</div>
+         </div>
+          </div>
+        
       ))}
     </div>
     </>
