@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'libre-bodoni': ['Libre Bodoni', 'serif'],
+        'lexend': ['Lexend', 'sans-serif']
+      },
       backgroundImage: {
         'daire1-bg': "url(/assets/images/daire1.png)",
         'daire2-bg': "url('/assets/images/daire2.png')",

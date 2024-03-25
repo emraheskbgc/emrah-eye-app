@@ -4,7 +4,7 @@ function Section4() {
   return (
     <>
       <div className="flex justify-center text-[60px] font-[500]">
-        <h1 className="flex flex-col">
+        <h1 className="flex flex-col font-libre-bodoni">
           <span>Other</span>{" "}
           <span className="text-redTitle ml-10 mt-[-20px]">Featured</span>
         </h1>
@@ -21,7 +21,7 @@ function Section4() {
               <img src={data.imagePath} alt="" className="w-10 h-10" />
             </div>
             <div className=" hidden md:flex mt-4 justify-center ">
-              <p className="font-[500] text-xs md:text-xl">{data.title}</p>
+              <p className="font-[500] text-xs md:text-xl font-lexend">{data.title}</p>
             </div>
             <div className=" hidden md:flex justify-center mt-6">
               <img src="/assets/images/vector.png" alt="" className="w-5 " />

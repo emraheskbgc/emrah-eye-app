@@ -5,7 +5,7 @@ function Section6() {
   return (
     <div className="flex justify-center items-center flex-col mt-28 h-[1141px] bg-grayIcon">
       <div className="flex justify-center text-[60px] font-[500]">
-        <h1 className="flex flex-col">
+        <h1 className="flex flex-col font-libre-bodoni">
           <span>Patient</span>{" "}
           <span className="text-redTitle ml-10 mt-[-20px]">Stories</span>
         </h1>

@@ -26,7 +26,7 @@ function Section7() {
   return (
     <div >
       <div className="flex justify-center text-[30px] md:text-[60px] font-[500] mt-20">
-        <h1 className="flex flex-col">
+        <h1 className="flex flex-col font-libre-bodoni">
           <span>customer</span>{" "}
           <span className="text-redTitle ml-10 mt-[-20px]">reviews</span>
         </h1>
@@ -41,7 +41,7 @@ function Section7() {
                 <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
               </div>
               <div className="w-full">
-                <div className="text-darkRed font-[500] uppercase text-md">{data.name} </div>
+                <div className="text-darkRed font-[500] uppercase text-md"><span className="font-lexend">{data.name}</span> </div>
                 <div className="flex justify-between space-x-4 ">
                   <div className="flex space-x-1 text-2xl text-starYellow">
                   {[...Array(Number(data.numberOfStars))].map((_, i) => (
