@@ -36,7 +36,7 @@ function Section1() {
                       <img src="/assets/images/vector.png" alt="" />
                     </div>
                     
-                      <div className="shadow-xl   rounded-2xl  p-4">
+                      <div className="shadow-2xl  scale-95 hover:scale-100 hover:duration-500 duration-500 hover:cursor-pointer  rounded-2xl  p-4">
                         <img className="mb-5 rounded-lg" src={item.cardImage} alt="" />
                         <span className="hidden md:block">{item.cardText}</span>
                         <span className="block md:hidden text-center">{item.text}</span>

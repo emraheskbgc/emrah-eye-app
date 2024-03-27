@@ -3,7 +3,7 @@ import { data } from "./data";
 function Section4() {
   return (
     <>
-      <div className="flex justify-center text-[60px] font-[500]">
+      <div className="flex justify-center text-[60px] font-[500] ">
         <h1 className="flex flex-col font-libre-bodoni">
           <span>Other</span>{" "}
           <span className="text-redTitle ml-10 mt-[-20px]">Featured</span>
@@ -23,11 +23,11 @@ function Section4() {
             <div className=" hidden md:flex mt-4 justify-center ">
               <p className="font-[500] text-xs md:text-xl font-lexend">{data.title}</p>
             </div>
-            <div className=" hidden md:flex justify-center mt-6">
+            <div className=" hidden md:flex justify-center mt-11 mb-10">
               <img src="/assets/images/vector.png" alt="" className="w-5 " />
             </div>
 
-            <div className="shadow-xl  flex flex-col justify-center p-3 rounded-2xl bg-grayIcon bg-opacity-90 w-[85%] h-72  md:w-80 md:h-80">
+            <div className="shadow-2xl  scale-95 hover:scale-100 hover:duration-500 duration-500 hover:cursor-pointer flex flex-col justify-center p-3   rounded-2xl bg-grayIcon bg-opacity-90 w-[85%] h-72  md:w-80 md:h-80">
               <div className=" flex justify-center md:max-h-60    items-center">
                 <img
                   className=" md:max-h-60 max-h-60  "
