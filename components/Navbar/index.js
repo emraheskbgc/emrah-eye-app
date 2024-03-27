@@ -3,7 +3,7 @@ import { useState } from "react";
 import React from "react";
 import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
 
-function Navbar({call, message}) {
+function Navbar({ call, message }) {
   // Menü öğeleri listesi
   const menuItems = [
     {
@@ -28,19 +28,18 @@ function Navbar({call, message}) {
   const [selectedItem, setSelectedItem] = useState(menuItems[0].id);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
   return (
-    <div className="flex justify-center ">
-      <div className="flex justify-between px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
-        <div className="bg-grayHead bg-opacity-5 p-2 rounded-full">
-          <div className="bg-grayHead bg-opacity-10 p-2 rounded-full">
-            <div className="bg-grayIcon py-1 px-2 rounded-full">
+    <div className="flex justify-center h-20">
+      <div className="flex  justify-between  px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
+        <div className="  z-10 bg-grayHead bg-opacity-5 rounded-full md:w-60 w-[72px] h-[72px] md:h-60 flex justify-center items-center  md:mt-20">
+          <div className=" bg-grayHead bg-opacity-10 rounded-full md:w-52 w-14 h-14 md:h-52 flex justify-center items-center ">
+            <div className=" bg-grayIcon rounded-full p-2 md:w-44 w-10 h-10 md:h-44 flex justify-center items-center ">
               {/* Logo */}
-              <img src="./assets/images/logo/logo-04.png " className="w-5 md:w-10" alt="Logo" />
+              <img src="./assets/images/logo/logo-04.png "  alt="Logo" />
             </div>
           </div>
         </div>
-        <div className= " sm:flex space-x-5 ">
+        <div className=" sm:flex space-x-5 ">
           {menuItems.map((item) => (
             <span
               key={item.id}
@@ -97,10 +96,16 @@ function Navbar({call, message}) {
         )}
         {/* Diğer cihazlarda görünen yardım butonu */}
         <div className="md:flex hidden space-x-2 ">
-          <div onClick={call} className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
+          <div
+            onClick={call}
+            className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
+          >
             <div className="text-xs">Call Center</div>
           </div>
-          <div onClick={message} className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2">
+          <div
+            onClick={message}
+            className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
+          >
             <div className="text-xs">Chat with us</div>
           </div>
         </div>
