@@ -6,7 +6,7 @@ function Section4() {
       <div className="flex justify-center text-[60px] font-[500] ">
         <h1 className="flex flex-col font-libre-bodoni">
           <span>Other</span>{" "}
-          <span className="text-redTitle ml-10 mt-[-20px]">Featured</span>
+          <span className="text-redTitle ml-10 mt-[-20px]">Treatments</span>
         </h1>
       </div>
       <div className="flex  flex-col md:flex-row justify-evenly md:space-x-3 ">
