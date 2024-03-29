@@ -106,7 +106,7 @@ function Footer() {
         </div>
       </div>
     </div>
-    <ApplicationModal openApplicationModal={openApplicationModal} />
+    <ApplicationModal openApplicationModal={openApplicationModal} setOpenApplicationModal={setOpenApplicationModal}/>
     </>
    
   );

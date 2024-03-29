@@ -4,7 +4,11 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+    "./public/**/*.html", 
+     "./node_modules/flowbite-react/lib/**/*.js",
+    
+    ],
+    
   theme: {
     extend: {
       fontFamily: {
@@ -37,8 +41,11 @@ module.exports = {
       grayBg:"#eceef0",
       linkedinLogo:"#0E76A8",
       facebookLogo:"#F1FAFF30",
-      cardBg:"#919EAB29"
+      cardBg:"#919EAB29",
+      blueEye:"#458bcb"
     }
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+]
 };
