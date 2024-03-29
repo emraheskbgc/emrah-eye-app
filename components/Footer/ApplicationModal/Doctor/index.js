@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 import { GoDash } from "react-icons/go";
 import { IoIosArrowBack } from "react-icons/io";
 
-function Doctor({ openDoctorModal, setOpenDoctorModal, goBack }) {
+function Doctor({ openDoctorModal, setOpenDoctorModal, goBack,handleCloseModal }) {
   return (
     <>
       <div
@@ -20,7 +20,7 @@ function Doctor({ openDoctorModal, setOpenDoctorModal, goBack }) {
                 
               
             </div>
-            <div onClick={() => setOpenDoctorModal(false)}>
+            <div onClick={handleCloseModal}>
               <div className="w-5 h-5 rounded-md p-4 cursor-pointer transition-all duration-700 relative  bg-grayHead bg-opacity-20 hover:bg-redTitle  group">
                 <IoClose
                   size={30}
@@ -38,7 +38,7 @@ function Doctor({ openDoctorModal, setOpenDoctorModal, goBack }) {
           </div>
           <form class="max-w-md mx-auto space-y-7 p-5 mt-16">
             {/*firstname lastname */}
-            <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="grid  md:grid-cols-2 md:gap-6">
               <div class="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
@@ -73,7 +73,7 @@ function Doctor({ openDoctorModal, setOpenDoctorModal, goBack }) {
               </div>
             </div>
             {/* email */}
-            <div class="relative z-0 w-full mb-5 group">
+            <div class="relative  z-0 w-full mb-5 group">
               <input
                 type="email"
                 name="floating_email"

@@ -18,6 +18,12 @@ function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
     setOpenApplicationModal(true)
   }
 
+
+  const handleCloseModal = () => {
+    setOpenApplicationModal(false)
+    setOpenDoctorModal(false)
+  }
+
   return (
     <>
       <div
@@ -46,7 +52,7 @@ function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
               Are you interested in a position within our group as an
               optometrist  or an optometric tech ?
             </div>
-            <div className="flex justify-center items-center mt-[10%] md:space-x-10 space-x-3">
+            <div className="flex flex-col md:flex-row justify-center items-center mt-[10%] md:space-x-10 space-y-3 md:space-y-0">
                 <div onClick={handleOpenDoctorModal} className=" md:px-5 px-2 py-1 md:py-3 rounded-full bg-blueEye bg-opacity-45 hover:bg-opacity-100 cursor-pointer ">
                     Doctor
                 </div>
@@ -60,7 +66,7 @@ function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
                 
         </div>
       </div>
-      <Doctor openDoctorModal={openDoctorModal} setOpenDoctorModal={setOpenDoctorModal} goBack={goBack}/>
+      <Doctor openDoctorModal={openDoctorModal} setOpenDoctorModal={setOpenDoctorModal} goBack={goBack} handleCloseModal={handleCloseModal}/>
     </>
   );
 }
