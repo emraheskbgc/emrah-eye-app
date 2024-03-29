@@ -13,13 +13,18 @@ function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
     setOpenDoctorModal(true)
   }
 
+  const goBack = () => {
+    setOpenDoctorModal(false)
+    setOpenApplicationModal(true)
+  }
+
   return (
     <>
       <div
         className={`fixed z-50  left-0 top-0 bg-blackBg bg-opacity-60 w-screen h-screen   justify-center items-center 
       ${openApplicationModal ? "flex" : "hidden"} `}
       >
-        <div className="bg-bodybg h-[80%] rounded-t rounded-b shadow-md md:w-[40%] w-[80%] flex flex-col">
+        <div className="bg-bodybg border-4 border-blueEye h-[80%] rounded-t rounded-b shadow-md md:w-[40%] w-[80%] flex flex-col">
             
           <div className='flex flex-row mr-3 mt-3 justify-end items-center'>
                
@@ -55,7 +60,7 @@ function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
                 
         </div>
       </div>
-      <Doctor openDoctorModal={openDoctorModal} setOpenDoctorModal={setOpenDoctorModal} />
+      <Doctor openDoctorModal={openDoctorModal} setOpenDoctorModal={setOpenDoctorModal} goBack={goBack}/>
     </>
   );
 }
