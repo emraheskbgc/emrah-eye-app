@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 import { GoDash } from "react-icons/go";
 import { IoIosArrowBack } from "react-icons/io";
 
-function Doctor({ openDoctorModal, goBack,handleCloseModal }) {
+function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -13,7 +13,7 @@ function Doctor({ openDoctorModal, goBack,handleCloseModal }) {
     <>
       <div
         className={`fixed z-50  left-0 top-0 bg-blackBg bg-opacity-0 w-screen h-screen   justify-center items-center 
-    ${openDoctorModal ? "flex" : "hidden"} `}
+    ${openOptometrichTechModal ? "flex" : "hidden"} `}
       >
         <div className="bg-bodybg h-[80%] border-4  border-redTitle rounded-t rounded-b shadow-md md:w-[40%] w-[80%] flex flex-col ">
           <div className="flex flex-row m-3 justify-between items-center">
@@ -34,7 +34,7 @@ function Doctor({ openDoctorModal, goBack,handleCloseModal }) {
             </div>
           </div>
           <div className=" mt-8 text-center font-[500] text-2xl text-blueEye">
-            <h2>Doctor</h2>
+            <h2>Optometrich Tech</h2>
           </div>
           <form class="max-w-md mx-auto space-y-7 p-5 ">
             {/*firstname lastname */}
@@ -187,4 +187,4 @@ function Doctor({ openDoctorModal, goBack,handleCloseModal }) {
   );
 }
 
-export default Doctor;
+export default OptometrichTech;

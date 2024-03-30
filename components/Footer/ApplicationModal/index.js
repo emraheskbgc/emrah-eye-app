@@ -3,25 +3,32 @@ import React, { useState } from "react";
 import { IoClose } from 'react-icons/io5';
 import { GoDash } from 'react-icons/go';
 import Doctor from "./Doctor";
+import OptometrichTech from "./OptometrichTech";
 
 function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
 
   const[openDoctorModal, setOpenDoctorModal] = useState(false)
+  const[openOptometrichTechModal, setOpenOptometrichTechModal] = useState(false)
 
 
   const handleOpenDoctorModal = () => {
     setOpenDoctorModal(true)
   }
+  const handleOpenOptometrichTechModal = () => {
+    setOpenOptometrichTechModal(true)
+  }
 
   const goBack = () => {
     setOpenDoctorModal(false)
     setOpenApplicationModal(true)
+    setOpenOptometrichTechModal(false)
   }
 
 
   const handleCloseModal = () => {
     setOpenApplicationModal(false)
     setOpenDoctorModal(false)
+    setOpenOptometrichTechModal(false)
   }
 
   return (
@@ -56,7 +63,7 @@ function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
                 <div onClick={handleOpenDoctorModal} className=" md:px-5 px-2 py-1 md:py-3 rounded-full bg-blueEye bg-opacity-45 hover:bg-opacity-100 cursor-pointer ">
                     Doctor
                 </div>
-                <div className=" md:px-5  md:py-3 px-2 py-1 rounded-full bg-blueEye bg-opacity-45 hover:bg-opacity-100 cursor-pointer ">
+                <div onClick={handleOpenOptometrichTechModal} className=" md:px-5  md:py-3 px-2 py-1 rounded-full bg-blueEye bg-opacity-45 hover:bg-opacity-100 cursor-pointer ">
                     Optometrich Tech
                 </div>
             </div>
@@ -67,6 +74,7 @@ function ApplicationModal({ openApplicationModal,setOpenApplicationModal }) {
         </div>
       </div>
       <Doctor openDoctorModal={openDoctorModal} setOpenDoctorModal={setOpenDoctorModal} goBack={goBack} handleCloseModal={handleCloseModal}/>
+      <OptometrichTech openOptometrichTechModal={openOptometrichTechModal} setOpenOptometrichTechModal={setOpenOptometrichTechModal} goBack={goBack} handleCloseModal={handleCloseModal} />
     </>
   );
 }
