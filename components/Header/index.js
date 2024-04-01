@@ -1,7 +1,8 @@
 "use client"
-import React, { useState } from 'react'
-import { FaFacebookSquare,FaLinkedin,FaInstagram } from "react-icons/fa";
+import React   from 'react'
+import { FaFacebookSquare,FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import Link from 'next/link';
 
 
 
@@ -18,9 +19,16 @@ function Header({call, message}) {
                 <img src="/assets/images/phoneIcon.png" alt="" onClick={call} />
             </div>
               <div className='flex justify-end w-full text-lg space-x-2 '>
-               <BsTwitterX className='hidden md:block'/>
-               <FaInstagram  className='hidden md:block' />
-               <FaFacebookSquare/>
+              <Link target='_blank' href="https://twitter.com/">
+               <BsTwitterX className='hidden md:block scale-90 duration-500 hover:scale-125 cursor-pointer '/>
+              </Link>
+              <Link href="https://www.instagram.com/" target='_blank'>
+                <FaInstagram  className='hidden md:block scale-90 duration-500 hover:scale-125 cursor-pointer' />
+              </Link>
+             <Link href="https://www.facebook.com/" target='_blank'>
+             <FaFacebookSquare className='scale-90 duration-500 hover:scale-125 cursor-pointer'/>
+             </Link>
+               
               </div>
 
                

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import React from "react";
 import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
+import {motion} from "framer-motion"
 
 function Navbar({ call, message }) {
   // Menü öğeleri listesi
@@ -31,20 +32,22 @@ function Navbar({ call, message }) {
   return (
     <div className="flex justify-center h-20">
       <div className="flex  justify-between  px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
-        <div className="  z-10 bg-grayHead bg-opacity-5 rounded-full md:w-60 w-[72px] h-[72px] md:h-60 flex justify-center items-center  md:mt-20">
+        <motion.div initial={{ x:-250 }}
+        animate={{ x:0 }}
+        transition={{ duration: 1 }} className="  z-10 bg-grayHead bg-opacity-5 rounded-full md:w-60 w-[72px] h-[72px] md:h-60 flex justify-center items-center  md:mt-20">
           <div className=" bg-grayHead bg-opacity-10 rounded-full md:w-52 w-14 h-14 md:h-52 flex justify-center items-center ">
             <div className=" bg-grayIcon rounded-full p-2 md:w-44 w-10 h-10 md:h-44 flex justify-center items-center ">
               {/* Logo */}
               <img src="./assets/images/logo/logo-04.png "  alt="Logo" />
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className=" sm:flex space-x-5 ">
           {menuItems.map((item) => (
             <span
               key={item.id}
               className={`text-grayHead cursor-pointer md:block hidden ${
-                selectedItem === item.id ? "border-b-2 pb-2" : ""
+                selectedItem === item.id ? "border-b-2 pb-2 border-grayHead" : ""
               }`}
               onClick={() => {
                 setSelectedItem(item.id);
@@ -100,13 +103,13 @@ function Navbar({ call, message }) {
             onClick={call}
             className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
           >
-            <div className="text-xs">Call Center</div>
+            <div className="text-xs scale-90 hover:scale-100">Call Center</div>
           </div>
           <div
             onClick={message}
             className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
           >
-            <div className="text-xs">Chat with us</div>
+            <div className="text-xs scale-90 hover:scale-100">Chat with us</div>
           </div>
         </div>
       </div>

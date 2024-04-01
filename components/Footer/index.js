@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+
 import ApplicationModal from "./ApplicationModal";
+import Link from "next/link";
 
 function Footer() {
   const [openApplicationModal, setOpenApplicationModal] = useState(false)
@@ -62,16 +65,16 @@ function Footer() {
             Carrier Opportunuties
           
         </div>
-        <div className="flex space-x-3 mt-28">
-          <div>
-            <FaFacebook />
-          </div>
-          <div>
-            <FaInstagram />
-          </div>
-          <div>
-            <FaLinkedin />
-          </div>
+        <div className="flex space-x-3 mt-28 text-lg">
+          <Link href="https://facebook.com/" target="_blank">
+            <FaFacebook className="scale-110 duration-500 hover:scale-150 cursor-pointer" />
+          </Link >
+          <Link href="https://instagram.com/" target="_blank">
+            <FaInstagram className="scale-110 duration-500 hover:scale-150 cursor-pointer" />
+          </Link >
+          <Link href="https://twitter.com/" target="_blank">
+            <BsTwitterX className="scale-110 duration-500 hover:scale-150 cursor-pointer"  />
+          </Link >
         </div>
       </div>
       <div className="md:hidden absolute    w-full flex flex-col justify-center items-center top-40">
