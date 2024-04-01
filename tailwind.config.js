@@ -38,6 +38,7 @@ module.exports = {
       darkRed:"#7f2929",
       starYellow:"#ebb84e",
       commentTimeText:"#c3cfd9",
+      commetTxt:"#989898",
       grayBg:"#eceef0",
       linkedinLogo:"#0E76A8",
       facebookLogo:"#F1FAFF30",

@@ -36,23 +36,26 @@ function Section7() {
         {datas.map((data) => (
           <div key={data.id} >
           <div  className="bg-grayIcon p-5  md:w-[400px] w-[350px]  items-center  rounded-2xl ml-4">
-            <div className="flex w-full  items-center">
+            <div className="flex w-full relative   items-center">
               <div className="mr-5">
                 <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
               </div>
-              <div className="w-full">
+              <div className="w-full  ">
                 <div className="text-darkRed font-[500] uppercase text-md"><span className="font-lexend">{data.name}</span> </div>
-                <div className="flex justify-between space-x-4 ">
+                <div className="flex space-x-8 ">
                   <div className="flex space-x-1 text-2xl text-starYellow">
                   {[...Array(Number(data.numberOfStars))].map((_, i) => (
                     <IoIosStar key={i} />
                   ))}
                   </div>
-                  <div className="text-commentTimeText">4 hour ago</div>
+                  <div className="text-commentTimeText text-sm">4 hour ago</div>
                 </div>
               </div>
+              <div className="abosulte top-0 right-0 mr-[-15px]" >
+                    <img src="/assets/images/googleIcon.png" alt="google icon" className="w-12" />
+              </div>
             </div>
-            <div className={`overflow-x-auto max-h-24 mt-4 text-commentTimeText ${styles.scrollStyle}`}>
+            <div className={`overflow-x-auto max-h-24 text-sm mt-4 text-commetTxt ${styles.scrollStyle}`}>
               <p>
                 {data.comment}
               </p>
