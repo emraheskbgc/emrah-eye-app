@@ -1,27 +1,26 @@
 "use client"
 import React, { useRef, useState } from "react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { IoIosStar } from "react-icons/io";
 import styles from "./styles.module.css";
 import datas from "@/public/assets/data/section7.json";
+import "./bullet.css"
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/free-mode'
+
+import {FreeMode, Pagination} from "swiper/modules"
+
+
+
 
 function Section7() {
   const scrollRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
 
 
 
-  const scrollToIndex = (index) => {
-    setActiveIndex(index);
-    if (scrollRef.current) {
-      const scrollWidth = scrollRef.current.offsetWidth;
-      const newPosition = index * (scrollWidth / datas.length); // Her gösterge noktası için bir bölüm
-      scrollRef.current.scrollTo({
-        left: newPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+ 
 
   return (
     <div >
@@ -32,10 +31,40 @@ function Section7() {
         </h1>
       </div>
      
-      <div ref={scrollRef} className={`flex space-x-1 mt-10   md:ml-20 overflow-x-auto ${styles.scrollYOff}`}>
+      <div ref={scrollRef} className={`flex   mt-10   md:ml-20 overflow-x-auto ${styles.scrollYOff} ${styles.divPagi}`}>
+        <Swiper 
+        style={{
+          
+          '--swiper--bullet-active': '#fff',
+        }}
+       
+          breakpoints={{
+            340:{
+              slidesPerView:2,
+              spaceBetween:15
+            },
+            700:{
+              slidesPerView:3,
+              spaceBetween:15
+            }
+          }}
+          freeMode={true}
+          pagination={{
+            clickable:true,
+            el: '.pagination',
+            type:"bullets",
+            
+            
+
+          }}
+         
+          modules={[FreeMode, Pagination]}
+        
+         
+        >
         {datas.map((data) => (
-          <div key={data.id} >
-          <div  className="bg-grayIcon p-5  md:w-[400px] w-[350px]  items-center  rounded-2xl ml-4">
+          <SwiperSlide key={data.id} >
+          <div  className="bg-grayIcon p-5  md:w-[450px] w-[350px]  items-center  rounded-2xl">
             <div className="flex w-full relative   items-center">
               <div className="mr-5">
                 <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
@@ -61,20 +90,20 @@ function Section7() {
               </p>
             </div>
           </div>
-          </div>
+          </SwiperSlide>
           
         ))}
+        </Swiper>
+        
       </div>
+      
+      
+      <div className={`${styles.paginationButton} pagination mt-5 ml-20  space-x-1` } />
+      
+      
+      
 
-      <div className=" hidden md:flex justify-start space-x-1 mt-6 md:ml-24 ml-5">
-        {datas.map((_, index) => (
-          <button
-            key={index}
-            className={`h-3  rounded-full  ${activeIndex === index ? 'bg-darkRed  w-6 ' : 'bg-darkRed w-3'}`}
-            onClick={() => scrollToIndex(index)}
-          />
-        ))}
-      </div>
+      
     </div>
   );
 }
