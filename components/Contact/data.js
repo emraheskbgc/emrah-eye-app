@@ -33,7 +33,7 @@
             { "day": "Thursday",  "start_time": "10:00am",  "end_time": "5:30pm" },
             { "day": "Friday",    "start_time": "10:00am",  "end_time": "5:30pm" },
             { "day": "Saturday",  "start_time": "10:00am",  "end_time": "5:30pm" },
-            { "day": "Sunday",    "start_time": "11:00am", "end_time": "3:30pm","closed":true },
+            { "day": "Sunday",   "closed":true },
             
         ],
     },
@@ -52,7 +52,7 @@
             { "day": "Thursday",  "start_time": "10:00am",  "end_time": "5:30pm" },
             { "day": "Friday",    "start_time": "10:00am",  "end_time": "5:30pm" },
             { "day": "Saturday",  "start_time": "10:00am",  "end_time": "5:30pm" },
-            { "day": "Sunday",    "start_time": "11:00am", "end_time": "3:30pm","closed":true },
+            { "day": "Sunday",    "closed":true },
             
         ],
     },
