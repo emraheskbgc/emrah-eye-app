@@ -6,8 +6,15 @@ import Link from 'next/link';
 
 
 
-function Header({call, message}) {
+function Header() {
 
+  const phoneNumber = "+14807267009";
+  const call = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+  const message = () => {
+    window.location.href = `https://wa.me/${phoneNumber}`;
+  };
  
   return (
     <div className='bg-grayHead text-grayIcon flex  justify-center md:justify-end items-center  space-x-3 text-xl md:pr-7 h-[48px]'>

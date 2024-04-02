@@ -3,8 +3,9 @@ import { useState } from "react";
 import React from "react";
 import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
 import {motion} from "framer-motion"
+import Link from "next/link";
 
-function Navbar({ call, message }) {
+function Navbar() {
   // Menü öğeleri listesi
   const menuItems = [
     {
@@ -29,19 +30,27 @@ function Navbar({ call, message }) {
   const [selectedItem, setSelectedItem] = useState(menuItems[0].id);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const phoneNumber = "+14807267009";
+  const call = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+  const message = () => {
+    window.location.href = `https://wa.me/${phoneNumber}`;
+  };
+
   return (
     <div className="flex justify-center h-20 ">
       <div className="flex  justify-between  px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
-        <motion.div initial={{ x:-250 }}
-        animate={{ x:0 }}
-        transition={{ duration: 1 }} className="  z-10 bg-grayHead bg-opacity-5 rounded-full w-28 h-28 md:w-80 md:h-80 flex justify-center items-center  md:mt-20">
+        <div 
+     
+       className="  z-10 bg-grayHead bg-opacity-5 rounded-full w-28 h-28 md:w-80 md:h-80 flex justify-center items-center  md:mt-20">
           <div className=" bg-grayHead bg-opacity-10 rounded-full w-24 h-24 md:w-72 md:h-72 flex justify-center items-center ">
             <div className=" bg-grayIcon rounded-full p-2 w-20 h-20 md:w-64 md:h-64 flex justify-center items-center ">
               {/* Logo */}
               <img src="./assets/images/logo/logo-05.png "  alt="Logo" />
             </div>
           </div>
-        </motion.div>
+        </div>
         <div className=" sm:flex space-x-5 ">
           {menuItems.map((item) => (
             <span
@@ -99,12 +108,14 @@ function Navbar({ call, message }) {
         )}
         {/* Diğer cihazlarda görünen yardım butonu */}
         <div className="md:flex hidden space-x-2 ">
+        <Link href="/contact">
         <div
             
             className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
           >
             <div className="text-xs scale-90 hover:scale-100">Schedule Exam</div>
           </div>
+        </Link>
           <div
             onClick={call}
             className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"

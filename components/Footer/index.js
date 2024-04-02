@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
