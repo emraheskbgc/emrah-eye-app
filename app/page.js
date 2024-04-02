@@ -17,6 +17,7 @@ export default function Home() {
   const message  =() => {
     window.location.href =`https://wa.me/${phoneNumber}`;
   }
+  
   return (
     <main className="bg-bodybg">
      
