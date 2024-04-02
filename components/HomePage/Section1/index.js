@@ -5,15 +5,15 @@ function Section1() {
   return (
     <div className="md:h-[190vh] h-[160vh] ">
       <div className="relative  md:p-0">
-      <div className="p-4 md:p-0">
+      <div className="p-4 md:p-0 overflow-hidden">
        <img
           src="/assets/images/head.png"
           alt=""
-          className="w-full   md:rounded-none rounded-2xl"
+          className="w-full scale-125  md:rounded-none rounded-2xl"
         />
 
-        <div className="absolute  right-0 top-0 md:mr-11 md:mt-6 mr-8 mt-5 ">
-          <img src="/assets/images/head2.png" alt="" className="w-16 md:w-56" />
+        <div className="absolute  right-0 top-0 md:mr-11 md:mt-2 mr-8 mt-5 ">
+          <img src="/assets/images/head2.png" alt="" className="w-16 md:w-48" />
         </div>
       </div>
        
