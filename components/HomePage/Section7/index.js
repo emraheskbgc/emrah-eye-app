@@ -26,8 +26,8 @@ function Section7() {
     <div className="overflow-hidden">
       <div className="flex justify-center text-[30px] md:text-[60px] font-[500] mt-20">
         <h1 className="flex flex-col font-libre-bodoni">
-          <span>patient</span>{" "}
-          <span className="text-redTitle ml-10 mt-[-20px]">reviews</span>
+          <span>Patient</span>{" "}
+          <span className="text-redTitle ml-10 mt-[-20px]">Reviews</span>
         </h1>
       </div>
      

@@ -41,24 +41,21 @@ function Footer() {
           <div>
             <h1>REACH OUT</h1>
           </div>
-          <div className="mt-3">
-            <p>emraheskibagci@gmail.com</p>
-            <p>
-              Phone: <span className="underline">(480) 726-7009</span>
-            </p>
-            <p>
-              Fax: <span className="underline">(480) 726-7009</span>
-            </p>
-          </div>
+          <div class="mt-3 flex flex-col justify-between">
+    <p class="mb-2">dnaeyegroup@gmail.com</p>
+    <p class="mb-2  flex justify-between cursor-pointer"><span>Phone:</span> <span class="underline">(480) 726-7009</span></p>
+    <p className=" flex justify-between cursor-pointer"><span>Fax:</span> <span class="underline">(480) 786-9684</span></p>
+</div>
+
         </div>
         <div className="flex space-x-8 mt-12">
           <div>
             <h1>ABOUT US </h1>
           </div>
           <div lassName="mt-3">
-            <p>Şirketimiz</p>
-            <p>Out Doctors</p>
-            <p>Career</p>
+            <p className="cursor-pointer hover:underline">About</p>
+            <p className="cursor-pointer hover:underline">Team</p>
+            <p className="cursor-pointer hover:underline">Reviews</p>
           </div>
         </div>
         <div onClick={handleOpenModalClick} className="mt-10 p-3 border rounded-full bg-redTitle bg-opacity-40 hover:bg-opacity-100 cursor-pointer text-center w-56">

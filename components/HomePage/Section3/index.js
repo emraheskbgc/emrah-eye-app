@@ -6,16 +6,16 @@ function Section3() {
   1
   return (
     <div className=" flex flex-col justify-center p-5 md:mt-[100px] mt-[120px]  mb-16 ">
-      <span className="font-libre-bodoni text-[60px] hidden  font-[500] flex-col md:flex justify-center items-center">
+      <span className="border font-libre-bodoni text-[60px] hidden  font-[500] flex-col md:flex justify-center items-center">
         Welcome <br />{" "}
-        <span className="text-redTitle text-3xl">To Zmyslinski Eye</span>
+        <span className="text-redTitle text-3xl ">To DNA Eye Group</span>
       </span>
       <div className="flex md:hidden justify-center items-center space-x-5">
         <div className="border-b-2 w-20 border-redTitle"></div>
         <span className="font-libre-bodoni text-[25px]  text-center font-[500] flex-col flex justify-center items-center text-redTitle">
           Welcome <br />{" "}
           <span className="text-blackBg text-sm">
-            to Zmyslinski Eye & <br /> Contact Lens Center
+          To DNA Eye Group
           </span>
         </span>
         <div className="border-b-2 w-20 border-redTitle"></div>

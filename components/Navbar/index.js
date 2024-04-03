@@ -11,23 +11,27 @@ function Navbar() {
     {
       id: 1,
       name: "Home",
+      linkPath:"/home"
     },
     {
       id: 2,
       name: "About",
+      linkPath:"/about"
     },
     {
       id: 3,
       name: "Team",
+      linkPath:"/team"
     },
     {
       id: 4,
-      name: "Review",
+      name: "Reviews",
+      linkPath:"/reviews"
     },
   ];
 
   // Seçili öğe ve menü açık durumu state'lerini tanımla
-  const [selectedItem, setSelectedItem] = useState(menuItems[0].id);
+  const [selectedItem, setSelectedItem] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const phoneNumber = "+14807267009";
@@ -37,6 +41,7 @@ function Navbar() {
   const message = () => {
     window.location.href = `https://wa.me/${phoneNumber}`;
   };
+  
 
   return (
     <div className="flex justify-center h-20 border-b">
@@ -45,7 +50,7 @@ function Navbar() {
      
        className="  z-10 bg-grayHead bg-opacity-5 rounded-full w-28 h-28 md:w-64 md:h-64 flex justify-center items-center  md:mt-20">
           <div className=" bg-grayHead bg-opacity-10 rounded-full w-24 h-24 md:w-56 md:h-56 flex justify-center items-center ">
-            <div className=" bg-grayIcon rounded-full p-2 w-20 h-20 md:w-48 md:h-48 flex justify-center items-center ">
+            <div className=" bg-white  rounded-full p-2 w-20 h-20 md:w-48 md:h-48 flex justify-center items-center ">
               {/* Logo */}
               <img src="./assets/images/logo/logo-04.png "  alt="Logo" />
             </div>
@@ -53,18 +58,21 @@ function Navbar() {
         </div>
         <div className=" sm:flex space-x-5 ">
           {menuItems.map((item) => (
-            <span
-              key={item.id}
+            <Link href={item.linkPath} key={item.linkPath}>
+             <span
+              
               className={`text-grayHead cursor-pointer md:block hidden ${
-                selectedItem === item.id ? "border-b-2 pb-2 border-grayHead" : ""
+                selectedItem === item.name ? "border-b-2 pb-2 border-grayHead" : ""
               }`}
               onClick={() => {
-                setSelectedItem(item.id);
+                setSelectedItem(item.name);
                 setIsMenuOpen(false);
               }}
             >
               {item.name}
             </span>
+            </Link>
+           
           ))}
         </div>
         <div className="flex sm:hidden border p-2 rounded-lg bg-grayHead text-grayIcon ">
