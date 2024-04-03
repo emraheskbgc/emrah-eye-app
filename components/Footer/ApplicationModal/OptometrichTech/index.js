@@ -49,7 +49,7 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
                   required
                 />
                 <label
-                  for="floating_first_name"
+                htmlFor="floating_first_name"
                   class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   First Name
@@ -65,7 +65,7 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
                   required
                 />
                 <label
-                  for="floating_last_name"
+                htmlFor="floating_last_name"
                   class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Last name
@@ -83,7 +83,7 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
                 required
               />
               <label
-                for="floating_email"
+              htmlFor="floating_email"
                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Email address
@@ -100,7 +100,7 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
                 required
               />
               <label
-                for="floating_email"
+              htmlFor="floating_email"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Address
@@ -120,7 +120,7 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
                   required
                 />
                 <label
-                  for="floating_phone"
+                htmlFor="floating_phone"
                   class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blueEye peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Phone number
@@ -136,7 +136,7 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
                     class="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
                   />
                   <label
-                    for="checkbox-1"
+                  htmlFor="checkbox-1"
                     class="ms-2 text-sm font-medium text-gray-500 "
                   >
                     Part time
@@ -150,7 +150,7 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
                     class="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
                   />
                   <label
-                    for="checkbox-1"
+                  htmlFor="checkbox-1"
                     class="ms-2 text-sm font-medium text-gray-500 "
                   >
                     Full time

@@ -1,11 +1,9 @@
-import About from '@/components/About'
+import DoctorDetails from '@/components/Team/DoctorDetails'
 import React from 'react'
 
 function page() {
   return (
-   <>
-   <About/>
-   </>
+  <DoctorDetails/>
   )
 }
 

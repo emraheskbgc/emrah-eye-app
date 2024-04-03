@@ -62,8 +62,8 @@ function Section7() {
       
        
       >
-      {datas.map((data) => (
-        <SwiperSlide key={data.id}  >
+      {datas.map((data, index) => (
+        <SwiperSlide key={index}  >
         <div  className="bg-grayIcon p-5  md:w-[450px] w-[350px] h-full items-center  rounded-2xl">
           <div className="flex w-full relative   items-center">
             <div className="mr-5">

@@ -25,7 +25,10 @@ module.exports = {
         'otherFea4': "url('/assets/images/otherfeatured4.png')",
         
         'footer-bg': "url('/assets/images/footerImage.png')",
-        'footer-bg-mobile':"url('/assets/images/footerImageMobile.png')"
+        'footer-bg-mobile':"url('/assets/images/footerImageMobile.png')",
+
+        'about-bg':"url('/assets/images/ContactImage.jpeg')",
+        'about1-bg':"url('/assets/images/about2.webp')"
       },
       
     },

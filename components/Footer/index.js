@@ -41,10 +41,10 @@ function Footer() {
           <div>
             <h1>REACH OUT</h1>
           </div>
-          <div class="mt-3 flex flex-col justify-between">
-    <p class="mb-2">dnaeyegroup@gmail.com</p>
-    <p class="mb-2  flex justify-between cursor-pointer"><span>Phone:</span> <span class="underline">(480) 726-7009</span></p>
-    <p className=" flex justify-between cursor-pointer"><span>Fax:</span> <span class="underline">(480) 786-9684</span></p>
+          <div className="mt-3 flex flex-col justify-between">
+    <p className="mb-2">dnaeyegroup@gmail.com</p>
+    <p className="mb-2  flex justify-between cursor-pointer"><span>Phone:</span> <span className="underline">(480) 726-7009</span></p>
+    <p className=" flex justify-between cursor-pointer"><span>Fax:</span> <span className="underline">(480) 786-9684</span></p>
 </div>
 
         </div>
@@ -52,7 +52,7 @@ function Footer() {
           <div>
             <h1>ABOUT US </h1>
           </div>
-          <div lassName="mt-3">
+          <div className="mt-3">
             <p className="cursor-pointer hover:underline">About</p>
             <p className="cursor-pointer hover:underline">Team</p>
             <p className="cursor-pointer hover:underline">Reviews</p>
