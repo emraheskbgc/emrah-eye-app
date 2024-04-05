@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { IoIosStar } from "react-icons/io";
 import styles from "./styles.module.css";
 import datas from "@/public/assets/data/section7.json";
@@ -12,13 +12,19 @@ import 'swiper/css/free-mode'
 
 import {FreeMode, Pagination} from "swiper/modules"
 
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 
 
 function Section7() {
   const scrollRef = useRef(null);
 
-
+  useEffect(()=> {
+    Aos.init()
+  },[])
+  
 
  
 
@@ -26,8 +32,8 @@ function Section7() {
     <div className="overflow-hidden">
       <div className="flex justify-center text-[30px] md:text-[60px] font-[500] mt-20">
         <h1 className="flex flex-col font-libre-bodoni">
-          <span>Patient</span>{" "}
-          <span className="text-redTitle ml-10 mt-[-20px]">Reviews</span>
+          <span data-aos="fade-right">Patient</span>{" "}
+          <span data-aos="fade-left" className="text-redTitle ml-10 mt-[-20px]">Reviews</span>
         </h1>
       </div>
      

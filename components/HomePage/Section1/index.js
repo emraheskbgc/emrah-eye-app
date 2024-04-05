@@ -1,7 +1,16 @@
-import React from "react";
+"use client"
+import React,{useEffect} from "react";
 import { data } from "./data";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 function Section1() {
+
+  useEffect(()=> {
+    Aos.init()
+  },[])
+  
   return (
     <div className="md:h-[190vh] h-[160vh] ">
       <div className="relative  md:p-0">
@@ -18,28 +27,28 @@ function Section1() {
       </div>
        
         <div className=" flex flex-col justify-center items-center absolute md:bottom-0 mb-[-40px]  w-full">
-          <div className=" md:flex    justify-center  md:justify-around    md:w-[80%]  w-[90%]  h-28 ">
+          <div  className=" md:flex    justify-center  md:justify-around    md:w-[80%]  w-[90%]  h-28 ">
           
-           {data.map((item, index) => (
+           {data.map((data, index) => (
               <>
-                <div key={index} className="">
+                <div  key={index} data-aos="zoom-in-up">
                   <div  className="md:space-x-5  flex flex-col justify-center items-center space-y-5  ">
-                    <div
-                      className={` ${item.bgClass} hidden  bg-cover bg-center shadow-lg opacity-90 shadow-grayHead w-28 h-28  md:w-56 md:h-56 rounded-full md:flex justify-center items-center `}
+                    <div 
+                      className={` ${data.bgClass} hidden  bg-cover bg-center shadow-lg opacity-90 shadow-grayHead w-28 h-28  md:w-56 md:h-56 rounded-full md:flex justify-center datas-center `}
                     >
-                      <img src={item.imagePath} alt="" />
+                      <img src={data.imagePath} alt="" />
                     </div>
                     <div className=" hidden md:flex mt-4 justify-center   ">
-                      <p className="font-[500] ">{item.text}</p>
+                      <p className="font-[500] ">{data.text}</p>
                     </div>
                     <div className=" hidden md:flex justify-center mt-6">
                       <img src="/assets/images/vector.png" alt="" />
                     </div>
                     
-                      <div className="shadow-2xl  scale-95 hover:scale-100 hover:duration-500 duration-500 hover:cursor-pointer  rounded-2xl  p-4">
-                        <img className="mb-5 rounded-lg" src={item.cardImage} alt="" />
-                        <span className="hidden md:block">{item.cardText}</span>
-                        <span className="block md:hidden text-center">{item.text}</span>
+                      <div  data-aos ="fade-up" className="shadow-2xl  scale-95 hover:scale-100 hover:duration-500 duration-500 hover:cursor-pointer  rounded-2xl  p-4">
+                        <img className="mb-5 rounded-lg" src={data.cardImage} alt="" />
+                        <span className="hidden md:block">{data.cardText}</span>
+                        <span className="block md:hidden text-center">{data.text}</span>
                       </div>
                     
                   </div>

@@ -1,12 +1,19 @@
 
-import React from "react";
+"use client"
+import React,{useEffect} from "react";
 import {  doctors } from "./data";
 import { CiImageOff } from "react-icons/ci";
 import Link from "next/link";
 import {data} from "@/components/Contact/data"
 
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 function Team() {
   const sortedDoctors = doctors.sort((a, b) => a.surname.localeCompare(b.surname));
+  useEffect(()=> {
+    Aos.init()
+  },[])
   return (
     <div className=" ">
       <div className="mt-[150px]  mb-[50px]  text-center text-3xl text-darkRed">
@@ -16,6 +23,8 @@ function Team() {
         <div className="grid border-b pb-10 grid-cols-1 w-[70%] justify-center items-center gap-10 ">
           {sortedDoctors.map((doctor, index) => (
             <div
+            data-aos={`${index%2 ===0 ? "fade-left" : "fade-right"}`}
+            data-aos-duration="1100"
               key={index}
               className={`flex ${
                 index % 2 === 0 ? "md:flex-row-reverse flex-col " : "md:flex-row flex-col "
@@ -70,7 +79,7 @@ function Team() {
       <div className=" grid md:grid-cols-3 font-libre-bodoni grid-cols-1 gap-4 w-[90%]">
       
       {data.map((item) => (
-        <div key={item.id} className=" p-3">
+        <div data-aos="flip-left" data-aos-duration="1200" key={item.id} className=" p-3">
           <div className="w-full h-96">
             <iframe
               className="w-full h-full"
@@ -130,9 +139,9 @@ function Team() {
 
       <div className=' flex  justify-center items-center h-full'>
           <div className='md:w-[50%] w-[90%] flex flex-col  z-30 text-center font-libre-bodoni'>
-              <span className='text-white md:text-lg  font-[700] '>We are here to help!</span>
-              <span className='text-white md:text-5xl text-2xl mt-5'>We’re a no-judgment zone, so feel free to come to us with any questions or concerns.</span>
-              <div>
+              <span data-aos="fade-right" className='text-white md:text-lg  font-[700] '>We are here to help!</span>
+              <span data-aos="fade-left" className='text-white md:text-5xl text-2xl mt-5'>We’re a no-judgment zone, so feel free to come to us with any questions or concerns.</span>
+              <div data-aos="zoom-in">
                <button className='mt-10 border p-3 rounded-full bg-blueEye bg-opacity-80 hover:bg-opacity-100 cursor-pointer text-white'>Book an Appointment</button>
               </div>
              

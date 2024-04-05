@@ -99,8 +99,9 @@ function Navbar() {
               </button>
               {/* Menü öğelerini listele */}
               {menuItems.map((item, index) => (
-                <span
-                  key={item.id}
+                <Link href={item.linkPath}    key={item.linkPath}>
+                  <span
+               
                   className={`text-grayHead flex flex-col  cursor-pointer ${
                     selectedItem === item.id ? "text-redTitle pb-2 " : ""
                   }`}
@@ -112,6 +113,8 @@ function Navbar() {
                 >
                   {item.name}
                 </span>
+                </Link>
+              
               ))}
             </div>
           </div>
