@@ -18,15 +18,15 @@ function Team() {
             <div
               key={index}
               className={`flex ${
-                index % 2 === 0 ? "flex-row-reverse " : "flex-row "
-              } items-center  h-96 bg-grayBg rounded-md`}
+                index % 2 === 0 ? "md:flex-row-reverse flex-col " : "md:flex-row flex-col "
+              } items-center  md:h-96 bg-grayBg rounded-md`}
             >
               {doctor.imgPath  ? (
-                <div className="w-1/2 md:w-1/4  overflow-hidden max-h-96 h-80 px-6  flex justify-center items-center">
+                <div className="w-1/2 md:w-1/4  overflow-hidden max-h-96 md:h-80 px-6 py-5 md:py-0  flex justify-center items-center">
                   <img
                     src={doctor.imgPath}
                     alt={doctor.name}
-                    className="rounded-md  w-full h-full bg-red-500"
+                    className="rounded-md  w-full md:h-full bg-red-500"
                   />
                 </div>
               ) : (
@@ -37,17 +37,17 @@ function Team() {
                 </div>
               )}
 
-              <div className="w-1/2 md:w-2/3 px-10 font-libre-bodoni  ">
-                <h2 className="text-2xl font-semibold">{doctor.name} {doctor.surname} </h2>
-                <h2 className="text-lg mb-5 font-semibold text-grayHead">
+              <div className="     md:w-2/3 px-10 font-libre-bodoni  ">
+                <h2 className="md:text-2xl  font-semibold">{doctor.name} {doctor.surname} </h2>
+                <h2 className="md:text-lg text-sm mb-5 font-semibold text-grayHead">
                   {doctor.location}
                 </h2>
-                <span className="text-wrap text-lg text-grayHead">
+                <span className="text-wrap md:text-lg text-xs text-grayHead">
                   {doctor.desc.slice(0, 200)}....
                 </span>
                 <Link href={`/team/${doctor.id}`}>
-                  <div className="mt-6">
-                    <button className=" p-2 bg-blueEye bg-opacity-75 hover:bg-opacity-100 cursor-pointer rounded-full text-white">
+                  <div className="mt-6 mb-2">
+                    <button className=" p-2 md:text-base text-xs bg-blueEye bg-opacity-75 hover:bg-opacity-100 cursor-pointer rounded-full text-white">
                       Read More
                     </button>
                   </div>
@@ -63,11 +63,11 @@ function Team() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-10">
-      <div className=" w-[70%] flex justify-center items-center flex-col">
-      <div className=" text-4xl text-darkRed font-[500] my-10">
+      <div className=" md:w-[70%] flex justify-center items-center flex-col">
+      <div className=" md:text-4xl text-xl  text-darkRed font-[500] my-10">
         <span>Our Arizona Locations</span>
       </div>
-      <div className=" grid grid-cols-3 gap-4 w-[90%]">
+      <div className=" grid md:grid-cols-3 font-libre-bodoni grid-cols-1 gap-4 w-[90%]">
       
       {data.map((item) => (
         <div key={item.id} className=" p-3">
@@ -80,7 +80,7 @@ function Team() {
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="text-center mt-2 text-2xl font-[500]">
+          <div className="text-center md:mt-2 mt-5 text-2xl font-[500]">
             <span>{item.title}</span>
           </div>
           <Link href={item.linkPath}>
@@ -109,7 +109,7 @@ function Team() {
               {item.work_hours.map((day, index) => (
                 <tr key={index}>
                   <td className="text-center pr-3">{day.day}:</td>
-                  {day.start_time ||
+                  {day.start_time &&
                     (day.end_time && (
                       <td>
                         {day.start_time} - {day.end_time}
@@ -129,9 +129,9 @@ function Team() {
       <div className="absolute top-0 right-0 w-full h-full bg-blackBg bg-opacity-35" />
 
       <div className=' flex  justify-center items-center h-full'>
-          <div className='w-[50%] flex flex-col  z-30 text-center font-libre-bodoni'>
-              <span className='text-white text-lg font-[700] '>We are here to help!</span>
-              <span className='text-white text-5xl mt-5'>We’re a no-judgment zone, so feel free to come to us with any questions or concerns.</span>
+          <div className='md:w-[50%] w-[90%] flex flex-col  z-30 text-center font-libre-bodoni'>
+              <span className='text-white md:text-lg  font-[700] '>We are here to help!</span>
+              <span className='text-white md:text-5xl text-2xl mt-5'>We’re a no-judgment zone, so feel free to come to us with any questions or concerns.</span>
               <div>
                <button className='mt-10 border p-3 rounded-full bg-blueEye bg-opacity-80 hover:bg-opacity-100 cursor-pointer text-white'>Book an Appointment</button>
               </div>

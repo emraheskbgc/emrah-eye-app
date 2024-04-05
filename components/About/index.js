@@ -7,13 +7,13 @@ function About() {
     <div >
         <div className=' relative flex justify-center items-center h-96 bg-center bg-cover   bg-about-bg  '>
         <div className="absolute top-0 right-0 w-full h-full bg-blackBg bg-opacity-30" />
-              <div className='flex flex-col justify-center items-center text-white z-30'>
+              <div className='flex flex-col  text-center justify-center items-center text-white z-30'>
                  <span className='font-[500]  mb-5'>Your eyes deserve the best</span>
-                 <span className='text-5xl font-libre-bodoni'>We will be there every step of the way</span>
+                 <span className='md:text-5xl text-3xl font-libre-bodoni'>We will be there every step of the way</span>
               </div>
         </div>
         <div className='flex justify-center items-center mt-20'>
-        <div className='grid  grid-cols-2  w-[70%] px-10'>
+        <div className='grid  md:grid-cols-2  grid-cols-1   w-[90%] md:w-[70%] md:px-10 md:space-y-0 space-y-16'>
           <div className=' font-libre-bodoni'>
             <h4 className='text-grayHead text-lg font-[400]'>{data.title1}</h4>
             <h2 className='text-4xl mt-2'>{data.title2}</h2>
@@ -25,8 +25,8 @@ function About() {
 
             }
           </div>
-          <div className=' px-10 h-[500px]'>
-            <img src="/assets/images/about1.jpg" alt="" className="h-full" />
+          <div className=' px-10   md:h-[500px] '>
+            <img src="/assets/images/about1.jpg" alt="" className="h-full w-full " />
           </div>
         </div>
         </div>
@@ -34,9 +34,9 @@ function About() {
         <div className="absolute top-0 right-0 w-full h-full bg-blackBg bg-opacity-35" />
 
         <div className=' flex  justify-center items-center h-full'>
-            <div className='w-[50%] flex flex-col  z-30 text-center font-libre-bodoni'>
+            <div className='md:w-[50%] flex flex-col  z-30 text-center font-libre-bodoni'>
                 <span className='text-white text-lg font-[700] '>{data.title3}</span>
-                <span className='text-white text-5xl mt-5'>{data.title4}</span>
+                <span className='text-white md:text-5xl text-2xl mt-5'>{data.title4}</span>
                 <div>
                  <button className='mt-10 border p-3 rounded-full bg-blueEye bg-opacity-80 hover:bg-opacity-100 cursor-pointer text-white'>Book an Appointment</button>
                 </div>
