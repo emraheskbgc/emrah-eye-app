@@ -46,12 +46,14 @@ function Navbar() {
   return (
     <div className="flex justify-center h-20 border-b">
       <div className="flex  justify-between  px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
-        <div className="  z-10 bg-grayHead bg-opacity-5 rounded-full w-28 h-28 md:w-64 md:h-64 flex justify-center items-center  md:mt-20">
-          <div className=" bg-grayHead bg-opacity-10 rounded-full w-24 h-24 md:w-56 md:h-56 flex justify-center items-center ">
-            <div className=" bg-white/90 backdrop-brightness-200      rounded-full p-2 w-20 h-20 md:w-48 md:h-48 flex justify-center items-center ">
+        <div className="  z-10 bg-grayHead bg-opacity-5 rounded-full w-24 h-24 md:w-64 md:h-64 flex justify-center items-center  md:mt-20">
+          <div className=" bg-grayHead bg-opacity-10 rounded-full w-20 h-20 md:w-56 md:h-56 flex justify-center items-center ">
+            <div className=" bg-white/90 backdrop-brightness-200      rounded-full p-2 w-16 h-16 md:w-48 md:h-48 flex justify-center items-center ">
             
               {/* Logo */}
-              <img src="./assets/images/logo/logo-04.png "  alt="Logo" />
+              <img src="./assets/images/logo/logo-04.png " className="hidden md:block" alt="Logo" />
+              <img src="./assets/images/logo/logo-02.png "  className="block md:hidden" alt="Logo" />
+
 
             </div>
           </div>
