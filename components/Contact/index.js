@@ -8,7 +8,7 @@ function Contact() {
       <div className=" text-4xl text-darkRed font-[500] mb-32">
         <span>Contact Us</span>
       </div>
-      <div className=" grid grid-cols-3 gap-4 w-[90%]">
+      <div className=" grid md:grid-cols-3 grid-cols-1 font-libre-bodoni   gap-4 w-[90%]">
         {data.map((item) => (
           <div key={item.id} className=" p-3">
             <div className="w-full h-96">
@@ -20,7 +20,7 @@ function Contact() {
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <div className="text-center mt-2 text-2xl font-[500]">
+            <div className="text-center md:mt-2 mt-10 text-2xl font-[500]">
               <span>{item.title}</span>
             </div>
             <Link href={item.linkPath}>
@@ -49,7 +49,7 @@ function Contact() {
                 {item.work_hours.map((day, index) => (
                   <tr key={index}>
                     <td className="text-center pr-3">{day.day}:</td>
-                    {day.start_time ||
+                    {day.start_time &&
                       (day.end_time && (
                         <td>
                           {day.start_time} - {day.end_time}

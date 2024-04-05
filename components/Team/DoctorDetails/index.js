@@ -10,13 +10,13 @@ function DoctorDetails({ doctor }) {
 
   return (
     <div className='mt-[200px] flex justify-center items-center'>
-      <div className='w-[65%] grid grid-cols-3 gap-10 '>
+      <div className='md:w-[65%] w-[80%] md:grid grid-cols-3 grid-cols-1 md:space-y-0 space-y-5 gap-10 '>
         <div className=' overflow-hidden'>
          {
           doctor.imgPath ?  <img src={doctor.imgPath} alt="" className='w-full' /> : <CiImageOff className='w-full h-full opacity-20  text-grayHead'/>
          }
         </div>
-        <div className=' col-span-2 font-libre-bodoni'>
+        <div className='  col-span-2 font-libre-bodoni'>
           <div className='mb-5'>
             <span className='text-grayHead font-[500] text-2xl'>
               {doctor.name}
