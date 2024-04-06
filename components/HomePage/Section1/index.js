@@ -12,7 +12,7 @@ function Section1() {
   },[])
   
   return (
-    <div className="md:h-[190vh] h-[160vh] ">
+    <div className="md:h-[190vh] h-[160vh] border ">
       <div className="relative  md:p-0">
       <div className="p-4  flex justify-center items-center mt-5 md:mt-0 md:p-0 md:overflow-hidden">
        <img
@@ -34,9 +34,9 @@ function Section1() {
                 <div  key={index} data-aos="zoom-in-up">
                   <div  className="md:space-x-5  flex flex-col justify-center items-center space-y-5  ">
                     <div 
-                      className={` ${data.bgClass} hidden  bg-cover bg-center shadow-lg opacity-90 shadow-grayHead w-28 h-28  md:w-56 md:h-56 rounded-full md:flex justify-center datas-center `}
+                      className={` ${data.bgClass} hidden  bg-cover bg-center shadow-lg opacity-90 shadow-grayHead w-28 h-28  md:w-56 md:h-56 rounded-full md:flex justify-center items-center datas-center `}
                     >
-                      <img src={data.imagePath} alt="" />
+                      <img src={data.imagePath} alt="" className="w-24 h-24" />
                     </div>
                     <div className=" hidden md:flex mt-4 justify-center   ">
                       <p className="font-[500] ">{data.text}</p>
