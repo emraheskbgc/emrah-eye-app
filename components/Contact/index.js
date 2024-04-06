@@ -1,17 +1,24 @@
-import React from "react";
+"use client"
+import React,{useEffect} from "react";
 import { data } from "./data";
 import Link from "next/link";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 function Contact() {
+  useEffect(()=> {
+    Aos.init()
+  },[])
+  
   return (
-    <div className="mt-[100px] flex flex-col justify-center items-center">
+    <div className="mt-[100px] flex flex-col justify-center items-center overflow-hidden">
       <div className=" text-4xl text-darkRed font-[500] mb-32">
         <span>Contact Us</span>
       </div>
       <div className=" grid md:grid-cols-3 grid-cols-1 font-libre-bodoni   gap-4 w-[90%]">
         {data.map((item) => (
           <div key={item.id} className=" p-3">
-            <div className="w-full h-96">
+            <div data-aos="zoom-in" className="w-full h-96">
               <iframe
                 className="w-full h-full"
                 src={item.mapPath}
@@ -20,31 +27,31 @@ function Contact() {
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <div className="text-center md:mt-2 mt-10 text-2xl font-[500]">
+            <div data-aos="fade-right" className="text-center md:mt-2 mt-10 text-2xl font-[500]">
               <span>{item.title}</span>
             </div>
             <Link href={item.linkPath}>
-              <div className="text-center mt-2 hover:underline h-16">
+              <div data-aos="fade-left" className="text-center mt-2 hover:underline h-16">
                 <span className="max-w-screen-sm break-words text-xl ">
                   {item.adress}
                 </span>
               </div>
             </Link>
 
-            <div className="  h-14 flex items-center justify-center mt-2">
+            <div data-aos="fade-up" className="  h-14 flex items-center justify-center mt-2">
               <button className=" px-4 py-2 rounded-full bg-blueEye bg-opacity-65 hover:bg-opacity-100 text-white">
                 Book Now
               </button>
             </div>
-            <div className="mt-2 text-center hover:underline cursor-pointer">
+            <div data-aos="fade-up" className="mt-2 text-center hover:underline cursor-pointer">
               Phone:<span>{item.phone}</span>
             </div>
             {item.fax && (
-              <div className="mt-2 text-center hover:underline cursor-pointer">
+              <div data-aos="fade-up" className="mt-2 text-center hover:underline cursor-pointer">
                 Fax:<span>{item.fax}</span>
               </div>
             )}
-            <div className=" flex justify-center items-center mt-8">
+            <div data-aos="fade-up" className=" flex justify-center items-center mt-8">
               <table>
                 {item.work_hours.map((day, index) => (
                   <tr key={index}>
@@ -63,32 +70,32 @@ function Contact() {
           </div>
         ))}
       </div>
-      <div class="relative flex justify-center items-center space-x-16 bg-cover bg-center h-[302px] mt-20  bg-[url('/assets/images/contactImage.jpeg')] border w-full ">
+      <div class="relative flex flex-col md:flex-row  justify-center items-center md:space-x-16 bg-cover bg-center h-[302px] mt-20  bg-[url('/assets/images/contactImage.jpeg')]  w-full ">
         <div className="absolute top-0 right-0 w-full h-full bg-blackBg bg-opacity-30" />
-        <div className="z-30  text-white ">
-          <h1 className="text-4xl mb-3 font-[500]">Before your appointment</h1>
-          <h4 className="font-[400]">
+        <div className="z-30  text-white  text-center">
+          <h1 data-aos="fade-right" className="text-4xl mb-3 font-[500]">Before your appointment</h1>
+          <h4 data-aos="fade-left" className="font-[400] mb-5 md:mb-0">
             Please download and fill out an intake form.
           </h4>
         </div>
-        <div className=" z-30 p-4 rounded-full text-white bg-blueEye bg-opacity-70 hover:bg-opacity-100 cursor-pointer">
+        <div data-aos="zoom-in" className=" z-30 p-4 rounded-full text-white bg-blueEye bg-opacity-70 hover:bg-opacity-100 cursor-pointer">
           <button>Download Intake Form</button>
         </div>
       </div>
 
-      <div className="h-screen bg-grayBg w-full flex justify-center items-center  ">
-        <div className="grid grid-cols-2 gap-4 justify-center items-center  h-screen w-[70%]">
+      <div className="h-screen pt-5 bg-grayBg w-full flex justify-center items-center  ">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 justify-center items-center  h-screen w-[70%]">
           <div >
-            <div className="text-grayHead mb-5">
+            <div data-aos="zoom-in" className="text-grayHead mb-5">
               <span>Contact us</span>
             </div>
-            <div className="text-black text-4xl">
+            <div data-aos="fade-right" className="text-black md:text-4xl text-2xl">
               <span>
                 Feel free to give us a call or send us an email with your
                 questions or comments.
               </span>
             </div>
-            <div className="text-grayHead text-xl mt-5">
+            <div data-aos="fade-left" className="text-grayHead md:text-xl text-lg mt-5">
               <span>
                 Have a question? Leave us a message and we’ll get back to you
                 soon. Please don’t submit sensitive medical information, we’ll
@@ -190,7 +197,7 @@ function Contact() {
 
               <button
                 type="submit"
-                class="text-white bg-blueEye bg-opacity-70 hover:bg-opacity-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+                class="text-white bg-blueEye bg-opacity-70 hover:bg-opacity-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mb-5 "
               >
                 Submit
               </button>

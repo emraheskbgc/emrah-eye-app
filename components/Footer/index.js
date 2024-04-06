@@ -53,9 +53,12 @@ function Footer() {
             <h1>ABOUT US </h1>
           </div>
           <div className="mt-3">
-            <p className="cursor-pointer hover:underline">About</p>
-            <p className="cursor-pointer hover:underline">Team</p>
-            <p className="cursor-pointer hover:underline">Reviews</p>
+          <Link href="/about"> <p className="cursor-pointer hover:underline">About</p></Link>
+          <Link href="/team"> <p className="cursor-pointer hover:underline">Team</p></Link>
+          <Link href="/reviews"><p className="cursor-pointer hover:underline">Reviews</p></Link>
+           
+           
+            
           </div>
         </div>
         <div onClick={handleOpenModalClick} className="mt-10 p-3 border rounded-full bg-redTitle bg-opacity-40 hover:bg-opacity-100 cursor-pointer text-center w-56">
@@ -86,16 +89,20 @@ function Footer() {
           <div>Phone:(480) 726-7009</div>
         </div>
         <div className="mt-6 space-y-4">
-          <div className="flex bg-linkedinLogo p-2 text-grayIcon  space-x-1 rounded ">
-            <div className="mr-3">
-              {" "}
-              <img src="/assets/images/footerLinkedin.png" alt="" />{" "}
+        <Link href="https://www.linkedin.com/">
+           <div className="flex bg-linkedinLogo p-2 text-grayIcon  space-x-1 rounded ">
+              <div className="mr-3">
+                {" "}
+                <img src="/assets/images/footerLinkedin.png" alt="" />{" "}
+              </div>
+              
+              <div className="text-sm font-[200] border-l pl-3  border-solid border-commentTimeText ">
+                Linkedin
+              </div>
             </div>
-            <div className="text-sm font-[200] border-l pl-3  border-solid border-commentTimeText ">
-              Linkedin
-            </div>
-          </div>
-          <div className="flex bg-facebookLogo p-2 text-grayIcon  space-x-1 rounded ">
+        </Link>
+        <Link href="https://www.facebook.com">
+         <div className="flex bg-facebookLogo p-2 text-grayIcon  space-x-1 rounded ">
             <div className="mr-2">
               {" "}
               <img src="/assets/images/footerFacebook.png" alt="" />{" "}
@@ -104,6 +111,9 @@ function Footer() {
               Facebook
             </div>
           </div>
+        </Link>
+         
+         
         </div>
       </div>
     </div>
