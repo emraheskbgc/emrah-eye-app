@@ -10,7 +10,7 @@ function Section6() {
   },[])
   
   return (
-    <div className="flex justify-center items-center flex-col mt-28 h-[1141px] bg-grayIcon">
+    <div className="flex justify-center items-center flex-col mt-28 h-[1141px] bg-grayIcon overflow-hidden">
       <div className="flex justify-center text-[60px] font-[500]">
         <h1 className="flex flex-col font-libre-bodoni">
           <span data-aos="fade-right">Patient</span>{" "}
@@ -33,7 +33,7 @@ function Section6() {
       <div class="block md:hidden container lg:px-32 px-4 py-8 mx-auto items-center ">
       <div class="grid grid-cols-  max-h-[700px] grid-rows-3 grid-flow-col gap-2">
         {data1.map((item, index) => (
-          <div key={index} class={` ${index === 2 ? "  col-span-2 h-32" : ""}`}>
+          <div data-aos="zoom-in-up"  key={index} class={` ${index === 2 ? "  col-span-2 h-32" : ""}`}>
           <img
             src={item.path}
             class=" h-full w-full object-cover object-center  "

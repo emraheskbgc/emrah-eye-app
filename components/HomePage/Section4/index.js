@@ -8,7 +8,7 @@ function Section4() {
     Aos.init()
   },[])
   return (
-    <>
+    <div className="overflow-hidden">
       <div className="flex justify-center text-[60px] font-[500] ">
         <h1 className="flex flex-col font-libre-bodoni">
           <span data-aos="fade-right">Other</span>{" "}
@@ -51,7 +51,7 @@ function Section4() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

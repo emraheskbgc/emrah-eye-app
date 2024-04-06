@@ -15,12 +15,12 @@ function Team() {
     Aos.init()
   },[])
   return (
-    <div className=" ">
+    <div className="overflow-hidden" >
       <div className="mt-[150px]  mb-[50px]  text-center text-3xl text-darkRed">
         <span>Our Team</span>
       </div>
       <div className="flex  justify-center items-center">
-        <div className="grid border-b pb-10 grid-cols-1 w-[70%] justify-center items-center gap-10 ">
+        <div className="grid border-b pb-10 grid-cols-1 w-[70%] justify-center items-center gap-4 ">
           {sortedDoctors.map((doctor, index) => (
             <div
             data-aos={`${index%2 ===0 ? "fade-left" : "fade-right"}`}

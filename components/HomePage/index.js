@@ -8,15 +8,15 @@ import Section7 from "@/components/HomePage/Section7";
 
 function HomePage() {
   return (
-    <>
-     <Section1 />
-    <Section3 />
-    <Section4 />
-    <Section7 />
+    <><Section1 /><Section3 /> <Section4 /><Section7 />
     <Section6 />
+
     </>
+
+  
    
   )
 }
 
 export default HomePage
+
