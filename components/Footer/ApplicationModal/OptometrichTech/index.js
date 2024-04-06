@@ -2,13 +2,41 @@ import React,{useState} from "react";
 import { IoClose } from "react-icons/io5";
 import { GoDash } from "react-icons/go";
 import { IoIosArrowBack } from "react-icons/io";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
+
   };
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      address: "",
+      phone: "",
+      partTime: false,
+      fullTime: false,
+      cv: null,
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("First name is required"),
+      lastName: Yup.string().required("Last name is required"),
+      email: Yup.string().email("Invalid email address").required("Email is required"),
+      address: Yup.string().required("Address is required"),
+      phone: Yup.string().matches(/^\d{3}-\d{3}-\d{4}$/, "Invalid phone number").required("Phone number is required"),
+    }),
+    onSubmit: (values) => {
+      // Submit logic here
+      console.log(values);
+    },
+  });
+
+  
   return (
     <>
       <div
@@ -36,151 +64,205 @@ function OptometrichTech({ openOptometrichTechModal, goBack, handleCloseModal })
           <div className=" mt-8 text-center font-[500] text-2xl text-blueEye">
             <h2>Optometrich Tech</h2>
           </div>
-          <form class="max-w-md mx-auto space-y-7 p-5 ">
-            {/*firstname lastname */}
-            <div class="grid  md:grid-cols-2 md:gap-6">
-              <div class="relative z-0 w-full mb-5 group">
-                <input
-                  type="text"
-                  name="floating_first_name"
-                  id="floating_first_name"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blueEye peer"
-                  placeholder=" "
-                  required
-                />
-                <label
-                htmlFor="floating_first_name"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >
-                  First Name
-                </label>
-              </div>
-              <div class="relative z-0 w-full mb-5 group">
-                <input
-                  type="text"
-                  name="floating_last_name"
-                  id="floating_last_name"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer"
-                  placeholder=" "
-                  required
-                />
-                <label
-                htmlFor="floating_last_name"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >
-                  Last name
-                </label>
-              </div>
-            </div>
-            {/* email */}
-            <div class="relative  z-0 w-full mb-5 group">
+          <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto space-y-7 p-5 ">
+          {/*firstname lastname */}
+          <div className="grid  md:grid-cols-2 md:gap-6">
+            <div className="relative z-0 w-full mb-5 group">
               <input
-                type="email"
-                name="floating_email"
-                id="floating_email"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer"
+                type="text"
+                name="firstName"
+                id="firstName"
+                value={formik.values.firstName}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+                  formik.touched.firstName && formik.errors.firstName ? "border-red-500" : "border-gray-300"
+                } appearance-none   focus:outline-none focus:ring-0 focus:border-blueEye peer`}
                 placeholder=" "
                 required
               />
               <label
-              htmlFor="floating_email"
-                class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                htmlFor="firstName"
+                className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
+                  formik.values.firstName ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
+                } peer-focus:text-blueEye  ${
+                  formik.touched.firstName && formik.errors.firstName ? "text-red-500" : ""
+                } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
               >
-                Email address
+                First Name
               </label>
+              {formik.touched.firstName && formik.errors.firstName ? (
+                <div className="text-red-500 text-sm mt-1">{formik.errors.firstName}</div>
+              ) : null}
             </div>
-            {/*adres */}
-            <div class="relative z-0 w-full mb-5 group">
+            <div className="relative z-0 w-full  group">
               <input
-                type="email"
-                name="floating_email"
-                id="floating_email"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer"
+                type="text"
+                name="lastName"
+                id="lastName"
+                value={formik.values.lastName}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+                  formik.touched.lastName && formik.errors.lastName ? "border-red-500" : "border-gray-300"
+                } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
                 placeholder=" "
                 required
               />
               <label
-              htmlFor="floating_email"
-                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blueEye  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                htmlFor="lastName"
+                className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
+                  formik.values.lastName ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
+                } peer-focus:text-blueEye  ${
+                  formik.touched.lastName && formik.errors.lastName ? "text-red-500" : ""
+                } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
               >
-                Address
+                Last name
               </label>
+              {formik.touched.lastName && formik.errors.lastName ? (
+                <div className="text-red-500 text-sm mt-1">{formik.errors.lastName}</div>
+              ) : null}
             </div>
-            {/* tel ve çarlışma tarzı */}
-
-            <div class="grid  md:grid-cols-2 md:gap-6">
-              <div class="relative z-0 w-full mb-5 group">
-                <input
-                  type="tel"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  name="floating_phone"
-                  id="floating_phone"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer"
-                  placeholder=" "
-                  required
-                />
-                <label
-                htmlFor="floating_phone"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blueEye peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >
-                  Phone number
-                </label>
-              </div>
-
-              <fieldset className="flex space-x-2  items-center  justify-center">
-                <div class="flex items-center ">
-                  <input
-                    id="checkbox-1"
-                    type="checkbox"
-                    value=""
-                    class="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
-                  />
-                  <label
-                  htmlFor="checkbox-1"
-                    class="ms-2 text-sm font-medium text-gray-500 "
-                  >
-                    Part time
-                  </label>
-                </div>
-                <div class="flex items-center">
-                  <input
-                    id="checkbox-1"
-                    type="checkbox"
-                    value=""
-                    class="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
-                  />
-                  <label
-                  htmlFor="checkbox-1"
-                    class="ms-2 text-sm font-medium text-gray-500 "
-                  >
-                    Full time
-                  </label>
-                </div>
-              </fieldset>
-            
-            </div>
-            <div className="w-full">
-              <label htmlFor="file-upload" className="relative cursor-pointer">
-                <span className="bg-white hover:bg-blueEye rounded-lg px-4 py-2 border border-gray-300 text-gray-500 hover:text-white">
-                  {selectedFile ? selectedFile.name : "Upload CV"}
-                </span>
-                <input
-                  id="file-upload"
-                  name="file-upload"
-                  type="file"
-                  className="sr-only"
-                  onChange={handleFileChange}
-                />
-              </label>
-            </div>
-           
-            <button
-              type="submit"
-              class="text-white mt-3 bg-blueEye bg-opacity-85 hover:bg-blueEye focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+          </div>
+          {/* email */}
+          <div className="relative  z-0 w-full mb-5 group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+                formik.touched.email && formik.errors.email ? "border-red-500" : "border-gray-300"
+              } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+              placeholder=" "
+              required
+            />
+            <label
+              htmlFor="email"
+              className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
+                formik.values.email ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
+              } peer-focus:text-blueEye  ${
+                formik.touched.email && formik.errors.email ? "text-red-500" : ""
+              } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
             >
-              Submit
-            </button>
-          </form>
+              Email address
+            </label>
+            {formik.touched.email && formik.errors.email ? (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.email}</div>
+            ) : null}
+          </div>
+          {/* address */}
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              type="text"
+              name="address"
+              id="address"
+              value={formik.values.address}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+                formik.touched.address && formik.errors.address ? "border-red-500" : "border-gray-300"
+              } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+              placeholder=" "
+              required
+            />
+            <label
+              htmlFor="address"
+              className={`peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
+                formik.values.address ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
+              } peer-focus:text-blueEye  ${
+                formik.touched.address && formik.errors.address ? "text-red-500" : ""
+              } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+            >
+              Address
+            </label>
+            {formik.touched.address && formik.errors.address ? (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.address}</div>
+            ) : null}
+          </div>
+          {/* phone number */}
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              value={formik.values.phone}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+                formik.touched.phone && formik.errors.phone ? "border-red-500" : "border-gray-300"
+              } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+              placeholder=" "
+              required
+            />
+            <label
+              htmlFor="phone"
+              className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
+                formik.values.phone ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
+              } peer-focus:text-blueEye  ${
+                formik.touched.phone && formik.errors.phone ? "text-red-500" : ""
+              } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+            >
+              Phone number
+            </label>
+            {formik.touched.phone && formik.errors.phone ? (
+              <div className="text-red-500 text-sm mt-1">{formik.errors.phone}</div>
+            ) : null}
+          </div>
+          {/* employment type */}
+          <fieldset className="flex space-x-2  items-center  justify-center">
+            <div className="flex items-center ">
+              <input
+                id="partTime"
+                name="partTime"
+                type="checkbox"
+                checked={formik.values.partTime}
+                onChange={formik.handleChange}
+                className="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
+              />
+              <label htmlFor="partTime" className="ms-2 text-sm font-medium text-gray-500 ">
+                Part time
+              </label>
+            </div>
+            <div className="flex items-center">
+              <input
+                id="fullTime"
+                name="fullTime"
+                type="checkbox"
+                checked={formik.values.fullTime}
+                onChange={formik.handleChange}
+                className="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
+              />
+              <label htmlFor="fullTime" className="ms-2 text-sm font-medium text-gray-500 ">
+                Full time
+              </label>
+            </div>
+          </fieldset>
+          {/* CV upload */}
+          <div className="w-full">
+            <label htmlFor="file-upload" className="relative cursor-pointer">
+              <span className="bg-white hover:bg-blueEye rounded-lg px-4 py-2 border border-gray-300 text-gray-500 hover:text-white">
+                {formik.values.cv ? formik.values.cv.name : "Upload CV"}
+              </span>
+              <input
+                id="file-upload"
+                name="file-upload"
+                type="file"
+                className="sr-only"
+                onChange={handleFileChange}
+              />
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            className="text-white mt-3 bg-blueEye bg-opacity-85 hover:bg-blueEye focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+          >
+            Submit
+          </button>
+        </form>
         </div>
       </div>
     </>

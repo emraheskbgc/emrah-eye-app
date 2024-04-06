@@ -88,9 +88,9 @@ function Footer() {
           <div>fax:(480) 786-9684</div>
           <div>Phone:(480) 726-7009</div>
         </div>
-        <div className="mt-6 space-y-4">
+        <div className="mt-6 ">
         <Link href="https://www.linkedin.com/">
-           <div className="flex bg-linkedinLogo p-2 text-grayIcon  space-x-1 rounded ">
+           <div className="flex bg-linkedinLogo p-2 mb-4 text-grayIcon  space-x-1 rounded ">
               <div className="mr-3">
                 {" "}
                 <img src="/assets/images/footerLinkedin.png" alt="" />{" "}
