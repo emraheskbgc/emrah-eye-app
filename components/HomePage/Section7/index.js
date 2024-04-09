@@ -28,6 +28,9 @@ function Section7() {
 
  
 
+  
+
+
   return (
     <div className="overflow-hidden">
       <div className="flex justify-center text-[30px] md:text-[60px] font-[500] mt-20">
@@ -37,7 +40,7 @@ function Section7() {
         </h1>
       </div>
      
-      <div ref={scrollRef} className={`flex   mt-10  ml-5 md:ml-20 overflow-x-auto ${styles.scrollYOff} ${styles.divPagi}`}>
+      <div ref={scrollRef} className={`flex   mt-10  ml-5 md:ml-20 overflow-x-auto ${styles.scrollYOff} `}>
       <Swiper 
       style={{
         
@@ -45,14 +48,21 @@ function Section7() {
       }}
      
         breakpoints={{
-          340:{
-            slidesPerView:1,
-            spaceBetween:15
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
           },
-          700:{
-            slidesPerView:3,
-            spaceBetween:15
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 40
           }
+       
         }}
         freeMode={true}
         pagination={{
@@ -70,27 +80,27 @@ function Section7() {
       >
       {datas.map((data, index) => (
         <SwiperSlide key={index}  >
-        <div  className="bg-grayIcon p-5  md:w-[450px] w-[350px] h-full items-center  rounded-2xl">
+        <div  className="bg-grayIcon  p-5    h-full items-center  rounded-2xl">
           <div className="flex w-full relative   items-center">
             <div className="mr-5">
               <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
             </div>
             <div className="w-full  ">
               <div className="text-darkRed font-[500] uppercase text-md"><span className="font-lexend">{data.name}</span> </div>
-              <div className="flex space-x-8 ">
+              <div className="flex space-x-8  items-center">
                 <div className="flex space-x-1 text-2xl text-starYellow">
                 {[...Array(Number(data.numberOfStars))].map((_, i) => (
                   <IoIosStar key={i} />
                 ))}
                 </div>
-                <div className="text-commentTimeText text-sm">4 hour ago</div>
+                <div className="text-commentTimeText text-xs">4 hour ago</div>
               </div>
             </div>
             <div className="abosulte top-0 right-0 mr-[-15px]" >
                   <img src="/assets/images/googleIcon.png" alt="google icon" className="w-12" />
             </div>
           </div>
-          <div className={`overflow-x-auto max-h-24 text-sm mt-4 text-commetTxt ${styles.scrollStyle}`}>
+          <div className={`overflow-x-auto  max-h-24 text-sm mt-8 text-commetTxt ${styles.scrollStyle}`}>
             <p>
               {data.comment}
             </p>

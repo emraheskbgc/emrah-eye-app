@@ -30,8 +30,8 @@ function About() {
 
             }
           </div>
-          <div data-aos="flip-right" data-aos-duration="1500" className=' px-10   md:h-[500px] '>
-            <img src="/assets/images/about1.jpg" alt="" className="h-full w-full " />
+          <div data-aos="flip-right" data-aos-duration="1500" className='  aspect-square md:ml-10   '>
+            <img src="/assets/images/about1.jpg" alt=""  />
           </div>
         </div>
         </div>

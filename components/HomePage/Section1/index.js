@@ -12,7 +12,7 @@ function Section1() {
   },[])
   
   return (
-    <div className="md:h-[190vh] h-[160vh] border ">
+    <div >
       <div className="relative  md:p-0">
       <div className="p-4  flex justify-center items-center mt-5 md:mt-0 md:p-0 md:overflow-hidden">
        <img
@@ -26,8 +26,8 @@ function Section1() {
         </div>
       </div>
        
-        <div className=" flex flex-col justify-center items-center absolute md:bottom-0 mb-[-40px]  w-full">
-          <div  className=" md:flex    justify-center  md:justify-around    md:w-[80%]  w-[90%]  h-28 ">
+        <div className=" flex flex-col justify-center items-center  mt-[-100px]  w-full">
+          <div  className=" md:flex    justify-center  md:justify-around    md:w-[80%]  w-[90%]   ">
           
            {data.map((data, index) => (
               <>
@@ -45,7 +45,7 @@ function Section1() {
                       <img src="/assets/images/vector.png" alt="" />
                     </div>
                     
-                      <div  data-aos ="fade-up" className="shadow-2xl  scale-95 hover:scale-100 hover:duration-500 duration-500 hover:cursor-pointer  rounded-2xl  p-4">
+                      <div  data-aos ="fade-up" className="shadow-2xl   hover:cursor-pointer  rounded-2xl  p-4">
                         <img className="mb-5 rounded-lg" src={data.cardImage} alt="" />
                         <span className="hidden md:block">{data.cardText}</span>
                         <span className="block md:hidden text-center">{data.text}</span>

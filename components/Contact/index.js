@@ -37,12 +37,14 @@ function Contact() {
                 </span>
               </div>
             </Link>
-
-            <div data-aos="fade-up" className="  h-14 flex items-center justify-center mt-2">
+          <Link href={item.bookLink}>
+          <div data-aos="fade-up" className="  h-14 flex items-center justify-center mt-2">
               <button className=" px-4 py-2 rounded-full bg-blueEye bg-opacity-65 hover:bg-opacity-100 text-white">
                 Book Now
               </button>
             </div>
+          </Link>
+            
             <div data-aos="fade-up" className="mt-2 text-center hover:underline cursor-pointer">
               Phone:<span>{item.phone}</span>
             </div>

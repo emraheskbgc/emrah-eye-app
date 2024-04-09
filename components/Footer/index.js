@@ -37,25 +37,25 @@ function Footer() {
       </div>
 
       <div className=" hidden md:block absolute md:left-32 md:top-32 top-20 left-10 text-sm md:text-base text-grayIcon">
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 ">
           <div>
             <h1>REACH OUT</h1>
           </div>
-          <div className="mt-3 flex flex-col justify-between">
-    <p className="mb-2">dnaeyegroup@gmail.com</p>
-    <p className="mb-2  flex justify-between cursor-pointer"><span>Phone:</span> <span className="underline">(480) 726-7009</span></p>
-    <p className=" flex justify-between cursor-pointer"><span>Fax:</span> <span className="underline">(480) 786-9684</span></p>
+          <div className=" flex flex-col justify-between">
+    <p className="mb-2 ">dnaeyegroup@gmail.com</p>
+    <p className="mb-2  flex justify-between cursor-pointer"><span>Phone:</span> <span className="underline hover:text-darkRed">(480) 726-7009</span></p>
+    <p className=" flex justify-between cursor-pointer"><span>Fax:</span> <span className="underline hover:text-darkRed">(480) 786-9684</span></p>
 </div>
 
         </div>
-        <div className="flex space-x-8 mt-12">
+        <div className="flex space-x-8 mt-12 ">
           <div>
             <h1>ABOUT US </h1>
           </div>
-          <div className="mt-3">
-          <Link href="/about"> <p className="cursor-pointer hover:underline">About</p></Link>
-          <Link href="/team"> <p className="cursor-pointer hover:underline">Team</p></Link>
-          <Link href="/reviews"><p className="cursor-pointer hover:underline">Reviews</p></Link>
+          <div >
+          <Link href="/about"> <p className="cursor-pointer hover:underline hover:text-darkRed">About</p></Link>
+          <Link href="/team"> <p className="cursor-pointer hover:underline hover:text-darkRed">Team</p></Link>
+          <Link href="/reviews"><p className="cursor-pointer hover:underline hover:text-darkRed">Reviews</p></Link>
            
            
             

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import React from "react";
 
 import Link from "next/link";
@@ -30,10 +30,14 @@ function Navbar() {
       linkPath:"/reviews"
     },
   ];
-
+  const selectedItemStored = localStorage.getItem("selectedItem")
   // Seçili öğe ve menü açık durumu state'lerini tanımla
-  const [selectedItem, setSelectedItem] = useState("Home");
+  const [selectedItem, setSelectedItem] = useState(selectedItemStored ||"Home");
   const [active, setActive]= useState(false)
+ 
+  useEffect(()=>{
+    localStorage.setItem("selectedItem", selectedItem)
+  },[selectedItem])
 
   const phoneNumber = "+14807267009";
   const call = () => {
@@ -45,7 +49,7 @@ function Navbar() {
   
 
   return (
-    <div className="flex justify-center h-20 md:border-b">
+    <div className="flex justify-center h-20 bg-gray-50">
       <div className="flex relative justify-between  px-5 items-center md:w-full w-[90%]     sm:px-6 mt-2 md:mt-0 shadow-2xl md:shadow-none rounded-2xl md:rounded-none ">
         <div className="  z-10 bg-grayHead bg-opacity-5 rounded-full w-24 h-24 md:w-64 md:h-64 flex justify-center items-center  md:mt-20">
           <div className=" bg-grayHead bg-opacity-10 rounded-full w-20 h-20 md:w-56 md:h-56 flex justify-center items-center ">
@@ -61,15 +65,15 @@ function Navbar() {
         </div>
         <div className=" sm:flex space-x-5 ">
           {menuItems.map((item) => (
-            <Link href={item.linkPath} key={item.linkPath}>
+            <Link href={item.linkPath} key={item.linkPath} >
              <span
               
-              className={`text-grayHead cursor-pointer md:block hidden ${
+              className={`text-grayHead cursor-pointer md:block hidden scale-90 hover:scale-100 hover:duration-500 duration-300  ${
                 selectedItem === item.name ? "border-b-2 pb-2 border-grayHead" : ""
               }`}
               onClick={() => {
                 setSelectedItem(item.name);
-                setIsMenuOpen(false);
+              
               }}
             >
               {item.name}
@@ -96,20 +100,20 @@ function Navbar() {
             
             className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
           >
-            <div className="text-xs scale-90 hover:scale-100">Schedule Exam</div>
+            <div className="text-xs scale-90 hover:scale-100 hover:duration-500 duration-300">Schedule Exam</div>
           </div>
         </Link>
           <div
             onClick={call}
             className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
           >
-            <div className="text-xs scale-90 hover:scale-100">Call Center</div>
+            <div className="text-xs scale-90 hover:scale-100 hover:duration-500 duration-300">Call Center</div>
           </div>
           <div
             onClick={message}
             className="hidden sm:flex justify-center cursor-pointer items-center space-x-2 text-grayIcon bg-grayHead border rounded-full px-5 py-2"
           >
-            <div className="text-xs scale-90 hover:scale-100">Chat with us</div>
+            <div className="text-xs scale-90 hover:scale-100 hover:duration-500 duration-300">Chat with us</div>
           </div>
         </div>
       </div>

@@ -28,14 +28,14 @@ function Team() {
               key={index}
               className={`flex ${
                 index % 2 === 0 ? "md:flex-row-reverse flex-col " : "md:flex-row flex-col "
-              } items-center  md:h-96 bg-grayBg rounded-md`}
+              } items-center mt-10 md:h-96 bg-gray-50 rounded-md shadow-xl`}
             >
               {doctor.imgPath  ? (
                 <div className="w-1/2 md:w-1/4  overflow-hidden max-h-96 md:h-80 px-6 py-5 md:py-0  flex justify-center items-center">
                   <img
                     src={doctor.imgPath}
                     alt={doctor.name}
-                    className="rounded-md  w-full md:h-full bg-red-500"
+                    className="rounded-md"
                   />
                 </div>
               ) : (
@@ -99,12 +99,15 @@ function Team() {
               </span>
             </div>
           </Link>
-
+          <Link href={item.bookLink}>
           <div className="  h-14 flex items-center justify-center mt-2">
             <button className=" px-4 py-2 rounded-full bg-blueEye bg-opacity-65 hover:bg-opacity-100 text-white">
               Book Now
             </button>
           </div>
+          </Link>
+
+          
           <div className="mt-2 text-center hover:underline cursor-pointer">
             Phone:<span>{item.phone}</span>
           </div>

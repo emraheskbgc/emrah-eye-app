@@ -20,7 +20,7 @@ function Reviews() {
   }
 
   return (
-    <div className='mt-[100px] overflow-hidden border'>
+    <div className='pt-[50px] overflow-hidden bg-gray-50'>
       <div className="flex justify-center text-[30px] md:text-[60px] font-[500] mt-20">
         <h1 className="flex flex-col text-darkRed font-libre-bodoni">
           <span>Reviews</span>
@@ -28,7 +28,7 @@ function Reviews() {
       </div>
 
       {chunkedData.map((chunk, index) => (
-        <div key={index} className={`mt-10  pl-10 md:ml-20 overflow-x-auto ${styles.scrollYOff}`}>
+        <div key={index} className={`  pl-10   mt-10 md:ml-20 overflow-x-auto ${styles.scrollYOff}`}>
           <Swiper
           breakpoints={{
             340:{
@@ -47,8 +47,8 @@ function Reviews() {
            
           >
             {chunk.map((data, dataIndex) => (
-              <SwiperSlide key={dataIndex}>
-                <div className="bg-grayIcon border p-5 md:w-[450px] w-[350px] h-full items-center rounded-2xl">
+              <SwiperSlide key={dataIndex} >
+                <div className="bg-grayIcon border p-5  h-full items-center rounded-2xl">
                   <div className="flex w-full relative items-center">
                     <div className="mr-5">
                       <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
@@ -73,8 +73,10 @@ function Reviews() {
                   </div>
                 </div>
               </SwiperSlide>
+              
             ))}
           </Swiper>
+          <hr className='mt-10 w-[98%]'/>
         </div>
       ))}
     </div>

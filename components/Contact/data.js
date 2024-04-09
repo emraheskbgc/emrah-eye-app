@@ -17,6 +17,7 @@
             { "day": "Sunday",    "start_time": "11:00am", "end_time": "3:30pm" },
             
         ],
+        "bookLink":"https://local.lenscrafters.com/az/chandler/3111-w-chandler-blvd.html"
     },
     {
         "id":2,
@@ -36,6 +37,7 @@
             { "day": "Sunday",   "closed":true },
             
         ],
+        "bookLink":"https://local.lenscrafters.com/eyedoctors/az/phoenix/2330-n-75th-ave.html"
     },
     {
         "id":3,
@@ -55,6 +57,7 @@
             { "day": "Sunday",    "closed":true },
             
         ],
+        "bookLink":"https://local.targetoptical.com/eyedoctors/az/peoria/dr-nez-caliskanalp"
     },
     {
         "id":4,
@@ -73,6 +76,7 @@
             { "day": "Sunday",    "start_time": "11:00am", "end_time": "3:30pm" },
             
         ],
+        "bookLink":"https://local.lenscrafters.com/eyedoctors/az/phoenix/1831-e-camelback-rd.html"
         
     },
     {
@@ -92,6 +96,7 @@
             { "day": "Sunday",    "start_time": "11:00am", "end_time": "3:30pm" },
             
         ],
+        "bookLink":"https://local.lenscrafters.com/eyedoctors/az/mesa/6555-e-southern-ave.html"
         
     },
     {
@@ -111,6 +116,7 @@
             { "day": "Sunday",    "start_time": "11:00am", "end_time": "3:30pm" },
             
         ],
+        "bookLink":"https://local.lenscrafters.com/eyedoctors/az/mesa/1649-south-stapley-drive.html"
      
     },
     {
@@ -131,6 +137,7 @@
             
             
         ],
+        "bookLink":"https://local.lenscrafters.com/eyedoctors/az/phoenix/21001-north-tatum-boulevard.html?cid=yext_odLCODA681-110001009"
     },
     {
         "id":8,
@@ -149,6 +156,7 @@
             { "day": "Sunday",    "start_time": "11:00am", "end_time": "3:30pm" },
             
         ],
+        "bookLink":"/"
     },
 
 ]

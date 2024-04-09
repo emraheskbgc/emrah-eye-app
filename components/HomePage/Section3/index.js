@@ -11,7 +11,7 @@ function Section3() {
     Aos.init()
   },[])
   return (
-    <div className=" flex flex-col justify-center border p-5 md:mt-0 mt-[120px]  mb-16 ">
+    <div className=" flex flex-col justify-center  p-5 md:mt-10 mt-[120px]  mb-16 ">
       <div  className=" font-libre-bodoni text-[60px] hidden  font-[500] flex-col md:flex justify-center items-center">
        <span data-aos="fade-right"> Welcome</span> 
         <span data-aos="fade-left" className="text-redTitle text-3xl ">To DNA Eye Group</span>
