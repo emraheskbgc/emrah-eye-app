@@ -115,6 +115,7 @@ function Navbar() {
           >
             <div className="text-xs scale-90 hover:scale-100 hover:duration-500 duration-300">Chat with us</div>
           </div>
+          
         </div>
       </div>
     </div>
