@@ -12,7 +12,7 @@ function Navbar() {
     {
       id: 1,
       name: "Home",
-      linkPath:"/home"
+      linkPath:"/"
     },
     {
       id: 2,
@@ -30,7 +30,8 @@ function Navbar() {
       linkPath:"/reviews"
     },
   ];
-  const selectedItemStored = localStorage.getItem("selectedItem")
+  const selectedItemStored = typeof window !== 'undefined' ? localStorage.getItem("selectedItem") : null;
+
   // Seçili öğe ve menü açık durumu state'lerini tanımla
   const [selectedItem, setSelectedItem] = useState(selectedItemStored ||"Home");
   const [active, setActive]= useState(false)
