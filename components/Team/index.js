@@ -84,9 +84,9 @@ function Team() {
             <iframe
               className="w-full h-full"
               src={item.mapPath}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
           <div className="text-center md:mt-2 mt-5 text-2xl font-[500]">

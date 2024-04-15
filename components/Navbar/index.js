@@ -1,7 +1,6 @@
 "use client";
-import { useState,useEffect } from "react";
+import { useState , useEffect} from "react";
 import React from "react";
-
 import Link from "next/link";
 import AnimatedHamburgerButton from "./AnimatedHamburgerButton";
 import { MobileMenu } from "./MobileMenu";
@@ -32,16 +31,24 @@ function Navbar() {
   ];
   
 
+  
+  let localItem = ""
  
-  const [selectedItem, setSelectedItem] = useState("Home"); 
- 
+  const [selectedItem, setSelectedItem] = useState(localItem ?? 'Home'); 
   const [active, setActive]= useState(false)
 
 
+  
+  useEffect(() => {
+     localItem = localStorage.getItem("selectedItem");
+    if (localItem) setSelectedItem(localItem);
+  }, []);
 
-const handleClickLocalItem = (item) => {
-  setSelectedItem(item)
-}
+  const handleClickLocalItem = (item) => {
+    setSelectedItem(item);
+    localStorage.setItem("selectedItem", item);
+  };
+
 
   const phoneNumber = "+14807267009";
   const call = () => {
