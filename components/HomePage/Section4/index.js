@@ -24,7 +24,7 @@ function Section4() {
             <div data-aos="zoom-in-down"
               className={`${data.bgClass}  bg-cover bg-center md:w-56 md:h-56 w-16 h-16 rounded-full md:flex hidden justify-center items-center `}
             >
-              <img src={data.imagePath} alt="" className="w-10 h-10" />
+              <img src={data.imagePath} alt="" className="w-16" />
             </div>
             <div data-aos="fade-right" className=" hidden md:flex mt-4 justify-center ">
               <p className="font-[500] text-xs md:text-xl font-lexend">{data.title}</p>
