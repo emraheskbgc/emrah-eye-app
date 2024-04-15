@@ -42,7 +42,7 @@ function Section1() {
                       <p className="font-[500] ">{data.text}</p>
                     </div>
                     <div className=" hidden md:flex justify-center mt-6">
-                      <img src="/assets/images/vector.png" alt="" />
+                      <img src="/assets/images/vector.png" alt="" className="w-16" />
                     </div>
                     
                       <div  data-aos ="fade-up" className="shadow-2xl   hover:cursor-pointer  rounded-2xl  p-4">

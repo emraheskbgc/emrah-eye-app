@@ -20,7 +20,7 @@ module.exports = {
         'daire2-bg': "url('/assets/images/daire2.png')",
         'daire3-bg': "url('/assets/images/daire3.jpeg')",
         'otherFea1': "url('/assets/images/otherfeatured1.jpeg')",
-        'otherFea2': "url('/assets/images/otherfeatured2.png')",
+        'otherFea2': "url('/assets/images/otherfeatured2.jpeg')",
         'otherFea3': "url('/assets/images/otherfeatured3.png')",
         'otherFea4': "url('/assets/images/otherfeatured4.png')",
         

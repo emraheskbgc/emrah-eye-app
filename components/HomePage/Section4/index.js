@@ -30,7 +30,7 @@ function Section4() {
               <p className="font-[500] text-xs md:text-xl font-lexend">{data.title}</p>
             </div>
             <div data-aos="fade-up" className=" hidden md:flex justify-center mt-11 mb-10">
-              <img src="/assets/images/vector.png" alt="" className="w-5 " />
+              <img src="/assets/images/vector.png" alt="" className="w-16 " />
             </div>
             
               <div data-aos="flip-down" className=" shadow-2xl hover:cursor-pointer flex flex-col justify-center p-3   rounded-2xl bg-grayIcon bg-opacity-90 w-[85%] h-72  md:w-80 md:h-80">

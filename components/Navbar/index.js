@@ -30,15 +30,18 @@ function Navbar() {
       linkPath:"/reviews"
     },
   ];
-  const selectedItemStored = typeof window !== 'undefined' ? localStorage.getItem("selectedItem") : null;
+  
 
-  // Seçili öğe ve menü açık durumu state'lerini tanımla
-  const [selectedItem, setSelectedItem] = useState(selectedItemStored ||"Home");
-  const [active, setActive]= useState(false)
  
-  useEffect(()=>{
-    localStorage.setItem("selectedItem", selectedItem)
-  },[selectedItem])
+  const [selectedItem, setSelectedItem] = useState("Home"); 
+ 
+  const [active, setActive]= useState(false)
+
+
+
+const handleClickLocalItem = (item) => {
+  setSelectedItem(item)
+}
 
   const phoneNumber = "+14807267009";
   const call = () => {
@@ -47,7 +50,6 @@ function Navbar() {
   const message = () => {
     window.location.href = `https://wa.me/${phoneNumber}`;
   };
-  
 
   return (
     <div className="flex justify-center h-20 bg-gray-50">
@@ -73,8 +75,7 @@ function Navbar() {
                 selectedItem === item.name ? "border-b-2 pb-2 border-grayHead" : ""
               }`}
               onClick={() => {
-                setSelectedItem(item.name);
-              
+                handleClickLocalItem(item.name);
               }}
             >
               {item.name}
