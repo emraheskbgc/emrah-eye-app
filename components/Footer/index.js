@@ -15,6 +15,7 @@ function Footer() {
   return (
     <>
      <div className={`relative  bg-footer-bg-mobile md:bg-footer-bg bg-cover  h-[613px]  mt-32 ${openApplicationModal ? "blur-md":""}`}>
+     
       <div className=" absolute bg-grayHead bg-opacity-5 rounded-full md:p-10 w-28 h-28 md:w-80 md:h-80 flex justify-center items-center md:right-14 top-0 right-[34%]  mt-[-50px] md:mt-[-110px]">
         <div className="absolute bg-grayHead bg-opacity-10 rounded-full md:p-10 w-24 h-24 md:w-72 md:h-72 flex justify-center items-center ">
           <div className="absolute bg-grayIcon rounded-full p-4 md:p-10 w-20 h-20 md:w-64 md:h-64 flex justify-center items-center ">
@@ -78,7 +79,7 @@ function Footer() {
           </Link >
         </div>
       </div>
-      <div className="md:hidden absolute    w-full flex flex-col justify-center items-center top-40">
+      <div className="md:hidden absolute    w-full flex flex-col justify-center items-center top-32">
         <div>
           <h1 className="uppercase font-[300] text-lg  text-grayIcon">
             connect
@@ -112,6 +113,11 @@ function Footer() {
             </div>
           </div>
         </Link>
+        <div onClick={handleOpenModalClick} className="mt-3  p-3 border rounded bg-redTitle bg-opacity-40 text-grayIcon cursor-pointer text-center w-56">
+          
+            Carrier Opportunuties
+          
+        </div>
          
          
         </div>
