@@ -32,21 +32,26 @@ function Navbar() {
   
 
   
-  let localItem = ""
- 
-  const [selectedItem, setSelectedItem] = useState(localItem ? localItem : 'Home'); 
+  let sessionItem ;
+  useEffect(()=> {
+    sessionItem =  sessionStorage.getItem("selectedItem") 
+  },[])
+   
+
+  const [selectedItem, setSelectedItem] = useState(); 
+  useEffect(() => {
+    
+   if (sessionItem) {setSelectedItem(sessionItem)} else{setSelectedItem("Home")}
+ }, []);
   const [active, setActive]= useState(false)
 
 
   
-  useEffect(() => {
-     localItem = localStorage.getItem("selectedItem");
-    if (localItem) setSelectedItem(localItem);
-  }, []);
 
-  const handleClickLocalItem = (item) => {
+
+  const handleClickSessionItem = (item) => {
     setSelectedItem(item);
-    localStorage.setItem("selectedItem", item);
+    sessionStorage.setItem("selectedItem", item);
   };
 
 
@@ -82,7 +87,7 @@ function Navbar() {
                 selectedItem === item.name ? "border-b-2 pb-2 border-grayHead" : ""
               }`}
               onClick={() => {
-                handleClickLocalItem(item.name);
+                handleClickSessionItem(item.name);
               }}
             >
               {item.name}
