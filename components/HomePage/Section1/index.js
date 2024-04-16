@@ -12,9 +12,9 @@ function Section1() {
   },[])
   
   return (
-    <div >
+    <div  >
       <div className="relative  md:p-0">
-      <div className="p-4  flex justify-center items-center mt-5 md:mt-0 md:p-0 md:overflow-hidden">
+      <div className="p-4  flex justify-center items-center pt-10 md:mt-0 md:p-0 md:overflow-hidden">
        <img
           src="/assets/images/head.png"
           alt=""
@@ -26,7 +26,7 @@ function Section1() {
         </div>
       </div>
        
-        <div className=" flex flex-col justify-center items-center  mt-[-100px]  w-full">
+        <div className=" flex flex-col justify-center items-center  md:mt-[-100px]  w-full">
           <div  className=" md:flex    justify-center  md:justify-around    md:w-[80%]  w-[90%]   ">
           
            {data.map((data, index) => (
