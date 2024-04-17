@@ -40,7 +40,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
         className={`fixed z-50  left-0 top-0 bg-blackBg bg-opacity-0 w-screen h-screen   justify-center items-center 
     ${openDoctorModal ? "flex" : "hidden"} `}
       >
-        <div className="bg-bodybg h-[80%] border-4  border-redTitle rounded-t rounded-b shadow-md md:w-[40%] w-[80%] flex flex-col ">
+        <div className="bg-bodybg h-[80%]  rounded-lg shadow-md md:w-[40%] w-[80%] flex flex-col ">
           <div className="flex flex-row m-3 justify-between items-center">
             <div onClick={goBack} className="  rounded-md p-[6px] text-xl  cursor-pointer  duration-700  transition-all bg-grayHead bg-opacity-20 hover:bg-redTitle text-redTitle hover:text-white  ">
               <IoIosArrowBack />

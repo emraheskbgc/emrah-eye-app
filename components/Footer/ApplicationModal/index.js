@@ -32,10 +32,10 @@ function ApplicationModal({ openApplicationModal, setOpenApplicationModal }) {
   return (
     <>
       <div
-        className={`fixed z-50  left-0 top-0 bg-blackBg bg-opacity-65 w-screen h-screen   justify-center items-center 
+        className={`fixed z-50  left-0 top-0 bg-blackBg bg-opacity-25 w-screen h-screen   justify-center items-center 
       ${openApplicationModal ? "flex  " : "hidden"} `}
       >
-        <div className="bg-bodybg border-4 border-blueEye h-[80%] rounded-t rounded-b shadow-md md:w-[40%] w-[80%] flex flex-col">
+        <div className="bg-bodybg  h-[60%] rounded-lg shadow-md md:w-[40%] w-[80%] flex flex-col">
           <div className="flex flex-row mr-3 mt-3 justify-end items-center">
             <div onClick={() => setOpenApplicationModal(false)}>
               <div className="w-5 h-5 rounded-md p-4 cursor-pointer transition-all duration-700 relative  bg-grayHead bg-opacity-20 hover:bg-redTitle  group">
@@ -50,7 +50,51 @@ function ApplicationModal({ openApplicationModal, setOpenApplicationModal }) {
               </div>
             </div>
           </div>
-          <div className="  md:mt-[30%] mt-[60%] h-full">
+          <div className="p-4 mt-10 md:p-5">
+          <p className="text-grayHead text-xl text-center mb-16">Are you interested in a position within our group as an
+          optometrist or an optometric tech ?</p>
+          <ul className="space-y-8 mb-4">
+              <li  onClick={handleOpenDoctorModal}>
+                  <input type="radio" id="job-1" name="job" value="job-1" className="hidden peer" required />
+                  <label for="job-1" className="inline-flex items-center justify-between w-full p-5 text-blueEye bg-white border border-gray-200 rounded-lg cursor-pointer    hover:border-blueEye hover:border-2   hover:bg-gray-100 ">                           
+                      <div className="block">
+                          <div className="w-full text-lg font-semibold">Doctor</div>
+                         
+                      </div>
+                      <svg className="w-4 h-4 ms-3 rtl:rotate-180 text-blueEye " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
+                  </label>
+              </li>
+              <li onClick={handleOpenOptometrichTechModal}>
+                  <input type="radio" id="job-2" name="job" value="job-2" className="hidden peer"/>
+                  <label for="job-2" className="inline-flex items-center justify-between w-full p-5 text-blueEye bg-white border border-gray-200 rounded-lg cursor-pointer    hover:border-blueEye hover:border-2  hover:bg-gray-100 ">
+                      <div className="block">
+                          <div className="w-full text-lg font-semibold">Optometrich Tech</div>
+                      </div>
+                      <svg className="w-4 h-4 ms-3 rtl:rotate-180 text-blueEye " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
+                  </label>
+              </li>
+              
+          </ul>
+          
+      </div>
+
+        </div>
+      </div>
+      <Doctor
+        openDoctorModal={openDoctorModal}
+        setOpenDoctorModal={setOpenDoctorModal}
+        goBack={goBack}
+        handleCloseModal={handleCloseModal}
+      />
+      <OptometrichTech
+        openOptometrichTechModal={openOptometrichTechModal}
+        setOpenOptometrichTechModal={setOpenOptometrichTechModal}
+        goBack={goBack}
+        handleCloseModal={handleCloseModal}
+      />
+    </>
+  );
+  {/**<div className="  md:mt-[30%] mt-[60%] h-full">
             <div className="text-center font-semibold text-grayHead opacity-75 md:text-xl ">
               Are you interested in a position within our group as an
               optometrist or an optometric tech ?
@@ -69,23 +113,7 @@ function ApplicationModal({ openApplicationModal, setOpenApplicationModal }) {
                 Optometrich Tech
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <Doctor
-        openDoctorModal={openDoctorModal}
-        setOpenDoctorModal={setOpenDoctorModal}
-        goBack={goBack}
-        handleCloseModal={handleCloseModal}
-      />
-      <OptometrichTech
-        openOptometrichTechModal={openOptometrichTechModal}
-        setOpenOptometrichTechModal={setOpenOptometrichTechModal}
-        goBack={goBack}
-        handleCloseModal={handleCloseModal}
-      />
-    </>
-  );
+          </div> */} 
 }
 
 export default ApplicationModal;
