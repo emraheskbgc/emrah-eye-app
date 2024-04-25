@@ -39,8 +39,8 @@ function Contact() {
             </Link>
           <Link href={item.bookLink}>
           <div data-aos="fade-up" className="  h-14 flex items-center justify-center mt-2">
-              <button className=" px-4 py-2 rounded-full bg-blueEye bg-opacity-65 hover:bg-opacity-100 text-white">
-                Book Now
+              <button className=" px-4 py-2 rounded-full bg-redTitle bg-opacity-90 hover:bg-opacity-100 text-white">
+                Schedule Exam
               </button>
             </div>
           </Link>
@@ -80,27 +80,23 @@ function Contact() {
             Please download and fill out an intake form.
           </h4>
         </div>
-        <div data-aos="zoom-in" className=" z-30 p-4 rounded-full text-white bg-blueEye bg-opacity-70 hover:bg-opacity-100 cursor-pointer">
+        <div data-aos="zoom-in" className=" z-30 p-4 rounded-full text-white bg-redTitle bg-opacity-70 hover:bg-opacity-100 cursor-pointer">
           <button>Download Intake Form</button>
         </div>
       </div>
 
-      <div className="h-screen pt-5 bg-grayBg w-full flex justify-center items-center  ">
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 justify-center items-center  h-screen w-[70%]">
+      <div className=" py-20 mb-20  bg-grayBg w-full flex justify-center items-center  ">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 justify-center items-center  w-[70%]">
           <div >
-            <div data-aos="zoom-in" className="text-grayHead mb-5">
-              <span>Contact us</span>
-            </div>
+            
             <div data-aos="fade-right" className="text-black md:text-4xl text-2xl">
               <span>
-                Feel free to give us a call or send us an email with your
-                questions or comments.
+                Feel free to call or email us with any questions/comments you may have
               </span>
             </div>
             <div data-aos="fade-left" className="text-grayHead md:text-xl text-lg mt-5">
               <span>
-                Have a question? Leave us a message and we’ll get back to you
-                soon. Please don’t submit sensitive medical information, we’ll
+                 Please don’t submit sensitive medical information, we’ll
                 get that when we talk to you.
               </span>
             </div>
@@ -115,13 +111,13 @@ function Contact() {
                   type="text"
                   name="floating_first_name"
                   id="floating_first_name"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-redTitle peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="floating_first_name"
-                  className="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-redTitle peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Name
                 </label>
@@ -134,13 +130,13 @@ function Contact() {
                   type="email"
                   name="floating_email"
                   id="floating_email"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-redTitle peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="floating_email"
-                  className="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-redTitle  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Email address
                 </label>
@@ -154,13 +150,13 @@ function Contact() {
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   name="floating_phone"
                   id="floating_phone"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-redTitle peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="floating_phone"
-                  className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-redTitle peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Phone number
                 </label>
@@ -176,7 +172,7 @@ function Contact() {
                 <textarea
                   id="message"
                   rows="4"
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  "
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 focus:ring-redTitle focus:border-redTitle  "
                   placeholder="Enter your message..."
                 ></textarea>
               </div>
@@ -186,7 +182,7 @@ function Contact() {
                   id="checkbox-2"
                   type="checkbox"
                   value=""
-                  className="w-4 h-4 text-blue-600  border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  className="w-4 h-4 text-redTitle  border-gray-300 rounded focus:ring-redTitle focus:ring-2"
                 />
                 <label
                   for="checkbox-2"
@@ -199,7 +195,7 @@ function Contact() {
 
               <button
                 type="submit"
-                className="text-white bg-blueEye bg-opacity-70 hover:bg-opacity-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mb-5 "
+                className="text-white bg-redTitle bg-opacity-90 hover:bg-opacity-100 focus:ring-4 focus:outline-none focus:ring-redTitle font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mb-5 "
               >
                 Submit
               </button>

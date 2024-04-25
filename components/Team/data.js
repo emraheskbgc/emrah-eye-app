@@ -15,15 +15,6 @@ export const doctors = [
         "desc":"Graduated from Southern California College of Optometry, Undergrad at University of Arizona - Molecular and Cellular Biology. \nSpecialty areas: Ocular Disease/Contact Lens. \nPracticing for 20+ years. Enjoys traveling, cooking and sports as well as spending time with family and friends."
     },
     {
-        "id":3,
-        "name":"Dr. Jeevan ",
-        "surname":"Sandhu",
-        "location":"Doctor at Desert Ridge Location",
-        "imgPath":"/assets/images/doctors/sandhu.png",
-        "desc":"Dr. Jeevan Sandhu has a strong passion for vision and eye care. She enjoys working with patients of all ages to achieve their vision goals through various types of contact lenses and eyeglasses. Dr. Sandhu places a strong emphasis on preventative eye care. She is well-versed in medical optometry,including diagnosis and treatment of ocular conditions ranging from dry eye syndrome to co-management of diabetic eye disease. \nIn her free time, Dr. Sandhu enjoys playing tennis, baking, trying new food spots and above all spending time with her husband and fur child, Mia.",
-
-    },
-    {
         "id":4,
         "name":"Dr. Kelly ",
         "surname":"Freese",
@@ -54,13 +45,7 @@ export const doctors = [
         "surname":"Li",
         "desc":"Coming soon..."
     },
-    {
-        "id":8,
-        "name":"Dr. Lindsay ",
-        "surname":"Carroll",
-        "imgPath":"/assets/images/doctors/carrol.jpeg",
-        "desc":"Dr. Lindsay Carroll obtained her Bachelor’s Degree in Biology from the Metropolitan University of Denver, Colorado and received her optometry degree from Midwestern University in Phoenix, Arizona. \nDr. Carroll prioritizes compassionate and thorough care with each of her patients to ensure all questions are answered and needs are met. She enjoys working with kids and adults alike. \nWith experience in medical optometry, double vision, and pediatrics, she is ready and willing to prepare you and your family for all your visual needs! \nIn her free time, Dr. Carroll enjoys exploring the outdoors with her fiancé and her puppy, Teega."
-    },
+    
     {
         "id":9,
         "name":"Dr. Jennifer ",
@@ -90,12 +75,6 @@ export const doctors = [
         "id":13,
         "name":"Dr. David ",
         "surname":"Thomas",
-        "desc":"Coming soon..."
-    },
-    {
-        "id":14,
-        "name":"Dr. Jasandeep ",
-        "surname":"Uppal",
         "desc":"Coming soon..."
     }
 

@@ -10,7 +10,7 @@ function Section6() {
   },[])
   
   return (
-    <div className="flex justify-center items-center flex-col mt-28 h-[1141px] bg-grayIcon overflow-hidden">
+    <div className="flex justify-center items-center flex-col  mt-28 h-[900px] bg-grayIcon overflow-hidden">
       <div className="flex justify-center text-[60px] font-[500]">
         <h1 className="flex flex-col font-libre-bodoni">
           <span data-aos="fade-right">Patient</span>{" "}

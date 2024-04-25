@@ -11,7 +11,7 @@ export const data = [
         "id":2,
         "imagePath":"/assets/images/otherimg2.png",
         "bgClass":"bg-otherFea2",
-        "title":"Glaoucoma Evaluation",
+        "title":"Glaoucoma Treatments",
         "cardImg":"/assets/images/othercard2.png",
         "cardText":"Lorem ipsum dolor sit amet  consectetur."
     },

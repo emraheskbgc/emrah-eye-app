@@ -58,7 +58,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
               </div>
             </div>
           </div>
-          <div className="  text-center font-[500] text-2xl text-blueEye">
+          <div className="  text-center font-[500] text-2xl text-redTitle">
             <h2>Doctor</h2>
           </div>
           <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto space-y-7 p-5 ">
@@ -74,7 +74,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                   onBlur={formik.handleBlur}
                   className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
                     formik.touched.firstName && formik.errors.firstName ? "border-red-500" : "border-gray-300"
-                  } appearance-none   focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+                  } appearance-none   focus:outline-none focus:ring-0 focus:border-redTitle peer`}
                   placeholder=" "
                   required
                 />
@@ -82,7 +82,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                   htmlFor="firstName"
                   className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
                     formik.values.firstName ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
-                  } peer-focus:text-blueEye  ${
+                  } peer-focus:text-redTitle  ${
                     formik.touched.firstName && formik.errors.firstName ? "text-red-500" : ""
                   } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
@@ -102,7 +102,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                   onBlur={formik.handleBlur}
                   className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
                     formik.touched.lastName && formik.errors.lastName ? "border-red-500" : "border-gray-300"
-                  } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+                  } appearance-none  focus:outline-none focus:ring-0 focus:border-redTitle peer`}
                   placeholder=" "
                   required
                 />
@@ -110,7 +110,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                   htmlFor="lastName"
                   className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
                     formik.values.lastName ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
-                  } peer-focus:text-blueEye  ${
+                  } peer-focus:text-redTitle  ${
                     formik.touched.lastName && formik.errors.lastName ? "text-red-500" : ""
                   } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
                 >
@@ -132,7 +132,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                 onBlur={formik.handleBlur}
                 className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
                   formik.touched.email && formik.errors.email ? "border-red-500" : "border-gray-300"
-                } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+                } appearance-none  focus:outline-none focus:ring-0 focus:border-redTitle peer`}
                 placeholder=" "
                 required
               />
@@ -140,7 +140,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                 htmlFor="email"
                 className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
                   formik.values.email ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
-                } peer-focus:text-blueEye  ${
+                } peer-focus:text-redTitle  ${
                   formik.touched.email && formik.errors.email ? "text-red-500" : ""
                 } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
               >
@@ -161,7 +161,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                 onBlur={formik.handleBlur}
                 className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
                   formik.touched.address && formik.errors.address ? "border-red-500" : "border-gray-300"
-                } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+                } appearance-none  focus:outline-none focus:ring-0 focus:border-redTitle peer`}
                 placeholder=" "
                 required
               />
@@ -169,7 +169,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                 htmlFor="address"
                 className={`peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
                   formik.values.address ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
-                } peer-focus:text-blueEye  ${
+                } peer-focus:text-redTitle  ${
                   formik.touched.address && formik.errors.address ? "text-red-500" : ""
                 } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
               >
@@ -190,7 +190,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                 onBlur={formik.handleBlur}
                 className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
                   formik.touched.phone && formik.errors.phone ? "border-red-500" : "border-gray-300"
-                } appearance-none  focus:outline-none focus:ring-0 focus:border-blueEye peer`}
+                } appearance-none  focus:outline-none focus:ring-0 focus:border-redTitle peer`}
                 placeholder=" "
                 required
               />
@@ -198,7 +198,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                 htmlFor="phone"
                 className={`peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] ${
                   formik.values.phone ? "peer-focus:start-0 rtl:peer-focus:translate-x-1/4" : ""
-                } peer-focus:text-blueEye  ${
+                } peer-focus:text-redTitle  ${
                   formik.touched.phone && formik.errors.phone ? "text-red-500" : ""
                 } peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
               >
@@ -217,7 +217,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                   type="checkbox"
                   checked={formik.values.partTime}
                   onChange={formik.handleChange}
-                  className="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
+                  className="w-4 h-4 text-redTitle bg-gray-100 border-gray-300 rounded focus:ring-redTitle  "
                 />
                 <label htmlFor="partTime" className="ms-2 text-sm font-medium text-gray-500 ">
                   Part time
@@ -230,7 +230,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
                   type="checkbox"
                   checked={formik.values.fullTime}
                   onChange={formik.handleChange}
-                  className="w-4 h-4 text-blueEye bg-gray-100 border-gray-300 rounded focus:ring-blueEye  "
+                  className="w-4 h-4 text-redTitle bg-gray-100 border-gray-300 rounded focus:ring-redTitle  "
                 />
                 <label htmlFor="fullTime" className="ms-2 text-sm font-medium text-gray-500 ">
                   Full time
@@ -240,7 +240,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
             {/* CV upload */}
             <div className="w-full">
               <label htmlFor="file-upload" className="relative cursor-pointer">
-                <span className="bg-white hover:bg-blueEye rounded-lg px-4 py-2 border border-gray-300 text-gray-500 hover:text-white">
+                <span className="bg-white hover:bg-redTitle rounded-lg px-4 py-2 border border-gray-300 text-gray-500 hover:text-white">
                   {formik.values.cv ? formik.values.cv.name : "Upload CV"}
                 </span>
                 <input
@@ -255,7 +255,7 @@ function Doctor({ openDoctorModal, goBack, handleCloseModal }) {
 
             <button
               type="submit"
-              className="text-white mt-3 bg-blueEye bg-opacity-85 hover:bg-blueEye focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+              className="text-white mt-3 bg-redTitle bg-opacity-85 hover:bg-redTitle focus:ring-4 focus:outline-none focus:ring-redTitle font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
               Submit
             </button>

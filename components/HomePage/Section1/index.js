@@ -14,15 +14,27 @@ function Section1() {
   return (
     <div  >
       <div className="relative  md:p-0">
-      <div className="p-4  flex justify-center items-center pt-10 md:mt-0 md:p-0 md:overflow-hidden">
+      <div className="p-4  flex justify-center  items-center pt-10 md:mt-0 md:p-0 md:overflow-hidden">
        <img
-          src="/assets/images/head.png"
+          src="/assets/images/newhead.png"
           alt=""
-          className="md:w-full w-[80%]  scale-125  md:rounded-none rounded-2xl"
+          className="md:w-full w-[95%] h-auto md:rounded-none rounded-2xl"
         />
 
-        <div className="absolute  right-0 top-0 md:mr-11 md:mt-2 mr-8 mt-2 ">
+        <div className="absolute  right-0 top-0 md:mr-8 md:mt-2 mr-8 mt-10 ">
           <img src="/assets/images/head2.png" alt="" className="w-12 md:w-48" />
+        </div>
+        <div className=" absolute top-0 left-0 md:mt-2 mt-10 ml-6  z-10 bg-grayHead bg-opacity-5 rounded-full w-20 h-20 md:w-72 md:h-72 flex justify-center items-center  ">
+          <div className=" bg-grayHead bg-opacity-10 rounded-full w-16 h-16 md:w-64 md:h-64 flex justify-center items-center ">
+            <div className=" bg-white/90 backdrop-brightness-200      rounded-full p-2 w-12 h-12 md:w-56 md:h-56 flex justify-center items-center ">
+            
+              {/* Logo */}
+              <img src="./assets/images/logo/logo-05.png " className="hidden md:block" alt="Logo" />
+              <img src="./assets/images/logo/logo-02.png "  className="block md:hidden w-7" alt="Logo" />
+
+
+            </div>
+          </div>
         </div>
       </div>
        

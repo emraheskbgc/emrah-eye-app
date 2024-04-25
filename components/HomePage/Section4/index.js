@@ -32,7 +32,9 @@ function Section4() {
             <div data-aos="fade-up" className=" hidden md:flex justify-center mt-11 mb-10">
               <img src="/assets/images/vector.png" alt="" className="w-16 " />
             </div>
-            
+              <div data-aos="fade-right" className="md:hidden font-libre-bodoni text-lg mb-3 font-bold text-grayHead">
+                {data.title}
+              </div>
               <div data-aos="flip-down" className=" shadow-2xl hover:cursor-pointer flex flex-col justify-center p-3   rounded-2xl bg-grayIcon bg-opacity-90 w-[85%] h-72  md:w-80 md:h-80">
               <div className="  flex justify-center overflow-hidden md:max-h-60    items-center">
                 <img

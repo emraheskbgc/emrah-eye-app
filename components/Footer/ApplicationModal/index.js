@@ -45,7 +45,7 @@ function ApplicationModal({ openApplicationModal, setOpenApplicationModal }) {
                 />
                 <GoDash
                   size={30}
-                  className="text-blueEye rotate-0 transition-all duration-700 opacity-0 group-hover:block group-hover:rotate-180 group-hover:opacity-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  className="text-white rotate-0 transition-all duration-700 opacity-0 group-hover:block group-hover:rotate-180 group-hover:opacity-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 />
               </div>
             </div>
@@ -56,21 +56,21 @@ function ApplicationModal({ openApplicationModal, setOpenApplicationModal }) {
           <ul className="space-y-8 mb-4">
               <li  onClick={handleOpenDoctorModal}>
                   <input type="radio" id="job-1" name="job" value="job-1" className="hidden peer" required />
-                  <label for="job-1" className="inline-flex items-center justify-between w-full p-5 text-blueEye bg-white border border-gray-200 rounded-lg cursor-pointer    hover:border-blueEye hover:border-2   hover:bg-gray-100 ">                           
+                  <label for="job-1" className="inline-flex items-center justify-between w-full p-5 text-redTitle bg-white border border-gray-200 rounded-lg cursor-pointer    hover:border-redTitle hover:border-2   hover:bg-gray-100 ">                           
                       <div className="block">
                           <div className="w-full text-lg font-semibold">Doctor</div>
                          
                       </div>
-                      <svg className="w-4 h-4 ms-3 rtl:rotate-180 text-blueEye " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
+                      <svg className="w-4 h-4 ms-3 rtl:rotate-180 text-redTitle " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
                   </label>
               </li>
               <li onClick={handleOpenOptometrichTechModal}>
                   <input type="radio" id="job-2" name="job" value="job-2" className="hidden peer"/>
-                  <label for="job-2" className="inline-flex items-center justify-between w-full p-5 text-blueEye bg-white border border-gray-200 rounded-lg cursor-pointer    hover:border-blueEye hover:border-2  hover:bg-gray-100 ">
+                  <label for="job-2" className="inline-flex items-center justify-between w-full p-5 text-redTitle bg-white border border-gray-200 rounded-lg cursor-pointer    hover:border-redTitle hover:border-2  hover:bg-gray-100 ">
                       <div className="block">
                           <div className="w-full text-lg font-semibold">Optometrich Tech</div>
                       </div>
-                      <svg className="w-4 h-4 ms-3 rtl:rotate-180 text-blueEye " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
+                      <svg className="w-4 h-4 ms-3 rtl:rotate-180 text-redTitle " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg>
                   </label>
               </li>
               

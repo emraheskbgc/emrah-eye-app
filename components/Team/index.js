@@ -56,7 +56,7 @@ function Team() {
                 </span>
                 <Link href={`/team/${doctor.id}`}>
                   <div className="mt-6 mb-2">
-                    <button className=" p-2 md:text-base text-xs bg-blueEye bg-opacity-75 hover:bg-opacity-100 cursor-pointer rounded-full text-white">
+                    <button className=" p-2 md:text-base text-xs bg-redTitle bg-opacity-90 hover:bg-opacity-100 cursor-pointer rounded-full text-white">
                       Read More
                     </button>
                   </div>
@@ -101,8 +101,8 @@ function Team() {
           </Link>
           <Link href={item.bookLink}>
           <div className="  h-14 flex items-center justify-center mt-2">
-            <button className=" px-4 py-2 rounded-full bg-blueEye bg-opacity-65 hover:bg-opacity-100 text-white">
-              Book Now
+            <button className=" px-4 py-2 rounded-full bg-redTitle bg-opacity-90 hover:bg-opacity-100 text-white">
+              Schedule Exam
             </button>
           </div>
           </Link>
@@ -145,7 +145,7 @@ function Team() {
               <span data-aos="fade-right" className='text-white md:text-lg  font-[700] '>We are here to help!</span>
               <span data-aos="fade-left" className='text-white md:text-5xl text-2xl mt-5'>We’re a no-judgment zone, so feel free to come to us with any questions or concerns.</span>
               <div data-aos="zoom-in">
-               <button className='mt-10 border p-3 rounded-full bg-blueEye bg-opacity-80 hover:bg-opacity-100 cursor-pointer text-white'>Book an Appointment</button>
+               <button className='mt-10 border p-3 rounded-full bg-redTitle bg-opacity-00 hover:bg-opacity-100 cursor-pointer text-white'>Book an Appointment</button>
               </div>
              
           </div>
