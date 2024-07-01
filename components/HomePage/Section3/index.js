@@ -30,10 +30,11 @@ function Section3() {
         <div  data-aos = "flip-down" className=" rounded-xl shadow-2xl bg-grayBg md:bg-grayIcon md:w-[90%]  p-6 ">
           {data.map((data, index) => (
             <div key={index}>
-              <h1 className="font-semibold font-lexend text-center text-lg mb-10">
-                {data.title}
-              </h1>
-              <p className="text-center font-lexend ">{data.description}</p>
+            
+              <p className="text-center font-lexend font-semibold ">{data.description}</p><br/>
+       
+              <p className="text-center font-lexend font-semibold">{data.description2}</p>       <br/>
+              <p className="text-center font-lexend font-semibold">{data.description3}</p>
               <div className="flex space-x-4  justify-end items-end text-redTitle opacity-65 duration-300 hover:opacity-100 cursor-pointer">
                 <div className="flex relative items-center justify-center ">
                   <div className="font-[500] '"><span className="font-libre-bodoni">Read more</span></div>

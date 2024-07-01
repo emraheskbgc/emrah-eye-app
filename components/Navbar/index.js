@@ -55,7 +55,7 @@ function Navbar() {
   };
 
 
-  const phoneNumber = "+14807267009";
+  const phoneNumber = "+18774362393";
   const call = () => {
     window.location.href = `tel:${phoneNumber}`;
   };

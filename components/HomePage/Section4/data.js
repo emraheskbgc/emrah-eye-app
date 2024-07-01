@@ -5,7 +5,7 @@ export const data = [
         "bgClass":"bg-otherFea1",
         "title":"Diabetic Evaluation ",
         "cardImg":"/assets/images/othercard1.png",
-        "cardText":"Lorem ipsum dolor sit amet  consectetur."
+        "cardText":"We focus on diabetic and hypertensive eye evaluations"
     },
     {
         "id":2,
@@ -13,7 +13,7 @@ export const data = [
         "bgClass":"bg-otherFea2",
         "title":"Glaoucoma Treatments",
         "cardImg":"/assets/images/othercard2.png",
-        "cardText":"Lorem ipsum dolor sit amet  consectetur."
+        "cardText":"Our glaucoma treatments mitigate sight-threatening conditions with medications."
     },
     {
         "id":4,
@@ -21,7 +21,7 @@ export const data = [
         "bgClass":"bg-otherFea4",
         "title":"Myopia Control",
         "cardImg":"/assets/images/othercard4.png",
-        "cardText":"Lorem ipsum dolor sit amet  consectetur."
+        "cardText":"We offer myopia control to slow nearsightedness with Misight and atropine."
     },
     {
         "id":3,

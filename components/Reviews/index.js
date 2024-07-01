@@ -48,7 +48,7 @@ function Reviews() {
           >
             {chunk.map((data, dataIndex) => (
               <SwiperSlide key={dataIndex} >
-                <div className="bg-grayIcon border p-5  h-full items-center rounded-2xl">
+                <div className="bg-grayIcon border p-5 min-h-52 h-full items-center rounded-2xl">
                   <div className="flex w-full relative items-center">
                     <div className="mr-5">
                       <img src={data.profileImage} className="w-12 h-10 rounded-full" alt="" />
